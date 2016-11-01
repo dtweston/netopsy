@@ -1,0 +1,58 @@
+//
+//  HeaderListViewController.swift
+//  Netopsy
+//
+//  Created by Dave Weston on 9/4/16.
+//  Copyright © 2016 Binocracy. All rights reserved.
+//
+
+import Cocoa
+
+class HeaderListViewController: NSViewController {
+
+    @IBOutlet weak var tableView: NSTableView!
+
+    var headers: [(String, String)]? {
+        didSet {
+            tableView?.reloadData()
+        }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do view setup here.
+    }
+}
+
+extension HeaderListViewController: NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return headers?.count ?? 0
+    }
+}
+
+extension HeaderListViewController: NSTableViewDelegate {
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+
+        if let header = headers?[row] {
+
+            var cellIdentifier = ""
+            var text = ""
+
+            if tableColumn == tableView.tableColumns[0] {
+                cellIdentifier = "HeaderNameCellID"
+                text = header.0
+            }
+            else if tableColumn == tableView.tableColumns[1] {
+                cellIdentifier = "HeaderValueCellID"
+                text = header.1
+            }
+
+            if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
+                cell.textField?.stringValue = text
+                return cell
+            }
+        }
+
+        return nil
+    }
+}

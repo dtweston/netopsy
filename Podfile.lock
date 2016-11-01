@@ -1,0 +1,20 @@
+PODS:
+  - HockeySDK-Mac (4.1.0)
+  - NSLogger (1.7.0):
+    - NSLogger/Standard (= 1.7.0)
+  - NSLogger/Standard (1.7.0)
+  - objective-zip (1.0.3)
+
+DEPENDENCIES:
+  - HockeySDK-Mac
+  - NSLogger
+  - objective-zip
+
+SPEC CHECKSUMS:
+  HockeySDK-Mac: c849a264e4f5f43520f7eec7d3f8b921cfc6e63b
+  NSLogger: daa17368272ddf10a0850c218fe49de23b50f2eb
+  objective-zip: 2f4eba2ed4a06ed74c7e6e4e7b80e6cacf212217
+
+PODFILE CHECKSUM: 3fc3d3be2324de36051148c88e15502014520070
+
+COCOAPODS: 1.1.1

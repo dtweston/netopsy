@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB373756BE237F8D9B8DB21D /* Pods_Netopsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C9D08B8B16C3BD1A3C8B22 /* Pods_Netopsy.framework */; };
+		B6044EA21D7FE2C800DB825F /* SessionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6044EA01D7FE2C800DB825F /* SessionInfoViewController.swift */; };
+		B624E0291D6E3B1000D29B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624E0281D6E3B1000D29B22 /* AppDelegate.swift */; };
+		B624E02B1D6E3B1000D29B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B624E02A1D6E3B1000D29B22 /* Assets.xcassets */; };
+		B624E0371D6F63DD00D29B22 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B624E0361D6F63DD00D29B22 /* libz.tbd */; };
+		B624E03B1D6F6B2900D29B22 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B624E03A1D6F6B2900D29B22 /* Utils.m */; };
+		B624E03D1D6F700100D29B22 /* DataDeflating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624E03C1D6F700100D29B22 /* DataDeflating.swift */; };
+		B65E22171DB9DB5D002D9FDF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E22161DB9DB5D002D9FDF /* Logger.swift */; };
+		B667FA211D72583900E4E7C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B667FA201D72583900E4E7C9 /* Main.storyboard */; };
+		B667FA3E1D73F36B00E4E7C9 /* SessionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B667FA3D1D73F36B00E4E7C9 /* SessionListViewController.swift */; };
+		B672FF6B1D832C9000A4AA42 /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */; };
+		B672FF6D1D8343AF00A4AA42 /* ImageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672FF6C1D8343AF00A4AA42 /* ImageDisplayViewController.swift */; };
+		B67AB3291DC1484400AC9D92 /* AppInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = B67AB3281DC1484400AC9D92 /* AppInfo.plist */; };
+		B67F8F6A1D7D222B001519F0 /* HeaderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F8F691D7D222B001519F0 /* HeaderListViewController.swift */; };
+		B67F8F6D1D7D27C2001519F0 /* BodyDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F8F6B1D7D27C2001519F0 /* BodyDisplayViewController.swift */; };
+		B686C4D21D769ABA00EE9065 /* TraceReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686C4D11D769ABA00EE9065 /* TraceReader.swift */; };
+		B686C4D41D769EC700EE9065 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686C4D31D769EC700EE9065 /* MainViewController.swift */; };
+		B686C4F41D76B3CC00EE9065 /* TraceDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686C4F31D76B3CC00EE9065 /* TraceDocument.swift */; };
+		B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688EF5B1D70AD4C005B313B /* RequestParser.swift */; };
+		B69FD8691D9AEC5400A7D682 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */; };
+		B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */; };
+		B6FA06C91DAEFC1000A11DB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FA06C81DAEFC1000A11DB7 /* QuartzCore.framework */; };
+		B6FC95F71DAB58BC0029C10C /* QueryDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1BEF6B7BCFB5B14A5EBBF726 /* Pods-Netopsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netopsy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy.debug.xcconfig"; sourceTree = "<group>"; };
+		78285773E1FF8D9C13569134 /* Pods-Netopsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netopsy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy.release.xcconfig"; sourceTree = "<group>"; };
+		B6044EA01D7FE2C800DB825F /* SessionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInfoViewController.swift; sourceTree = "<group>"; };
+		B624E0251D6E3B1000D29B22 /* Netopsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netopsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B624E0281D6E3B1000D29B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B624E02A1D6E3B1000D29B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B624E02F1D6E3B1000D29B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B624E0361D6F63DD00D29B22 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B624E0381D6F6B2800D29B22 /* Netopsy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Netopsy-Bridging-Header.h"; sourceTree = "<group>"; };
+		B624E0391D6F6B2900D29B22 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		B624E03A1D6F6B2900D29B22 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		B624E03C1D6F700100D29B22 /* DataDeflating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDeflating.swift; sourceTree = "<group>"; };
+		B65E22161DB9DB5D002D9FDF /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B667FA201D72583900E4E7C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B667FA3D1D73F36B00E4E7C9 /* SessionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionListViewController.swift; sourceTree = "<group>"; };
+		B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
+		B672FF6C1D8343AF00A4AA42 /* ImageDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDisplayViewController.swift; sourceTree = "<group>"; };
+		B67AB3281DC1484400AC9D92 /* AppInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppInfo.plist; sourceTree = "<group>"; };
+		B67F8F691D7D222B001519F0 /* HeaderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderListViewController.swift; sourceTree = "<group>"; };
+		B67F8F6B1D7D27C2001519F0 /* BodyDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyDisplayViewController.swift; sourceTree = "<group>"; };
+		B686C4D11D769ABA00EE9065 /* TraceReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceReader.swift; sourceTree = "<group>"; };
+		B686C4D31D769EC700EE9065 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B686C4F31D76B3CC00EE9065 /* TraceDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceDocument.swift; sourceTree = "<group>"; };
+		B688EF5B1D70AD4C005B313B /* RequestParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParser.swift; sourceTree = "<group>"; };
+		B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceDocumentController.swift; sourceTree = "<group>"; };
+		B6FA06C81DAEFC1000A11DB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDisplayViewController.swift; sourceTree = "<group>"; };
+		E9C9D08B8B16C3BD1A3C8B22 /* Pods_Netopsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netopsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B624E0221D6E3B1000D29B22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6FA06C91DAEFC1000A11DB7 /* QuartzCore.framework in Frameworks */,
+				B624E0371D6F63DD00D29B22 /* libz.tbd in Frameworks */,
+				AB373756BE237F8D9B8DB21D /* Pods_Netopsy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7270375D4C148F0044E7EAC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BEF6B7BCFB5B14A5EBBF726 /* Pods-Netopsy.debug.xcconfig */,
+				78285773E1FF8D9C13569134 /* Pods-Netopsy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B624E01C1D6E3B1000D29B22 = {
+			isa = PBXGroup;
+			children = (
+				B624E0271D6E3B1000D29B22 /* Netopsy */,
+				B624E0261D6E3B1000D29B22 /* Products */,
+				B624E0351D6F63DD00D29B22 /* Frameworks */,
+				7270375D4C148F0044E7EAC7 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B624E0261D6E3B1000D29B22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B624E0251D6E3B1000D29B22 /* Netopsy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B624E0271D6E3B1000D29B22 /* Netopsy */ = {
+			isa = PBXGroup;
+			children = (
+				B624E0281D6E3B1000D29B22 /* AppDelegate.swift */,
+				B667FA201D72583900E4E7C9 /* Main.storyboard */,
+				B686C4D31D769EC700EE9065 /* MainViewController.swift */,
+				B667FA3D1D73F36B00E4E7C9 /* SessionListViewController.swift */,
+				B624E02A1D6E3B1000D29B22 /* Assets.xcassets */,
+				B624E02F1D6E3B1000D29B22 /* Info.plist */,
+				B624E0391D6F6B2900D29B22 /* Utils.h */,
+				B624E03A1D6F6B2900D29B22 /* Utils.m */,
+				B624E0381D6F6B2800D29B22 /* Netopsy-Bridging-Header.h */,
+				B624E03C1D6F700100D29B22 /* DataDeflating.swift */,
+				B688EF5B1D70AD4C005B313B /* RequestParser.swift */,
+				B686C4D11D769ABA00EE9065 /* TraceReader.swift */,
+				B686C4F31D76B3CC00EE9065 /* TraceDocument.swift */,
+				B67F8F691D7D222B001519F0 /* HeaderListViewController.swift */,
+				B67F8F6B1D7D27C2001519F0 /* BodyDisplayViewController.swift */,
+				B6044EA01D7FE2C800DB825F /* SessionInfoViewController.swift */,
+				B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */,
+				B672FF6C1D8343AF00A4AA42 /* ImageDisplayViewController.swift */,
+				B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */,
+				B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */,
+				B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */,
+				B65E22161DB9DB5D002D9FDF /* Logger.swift */,
+				B67AB3281DC1484400AC9D92 /* AppInfo.plist */,
+			);
+			path = Netopsy;
+			sourceTree = "<group>";
+		};
+		B624E0351D6F63DD00D29B22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6FA06C81DAEFC1000A11DB7 /* QuartzCore.framework */,
+				B624E0361D6F63DD00D29B22 /* libz.tbd */,
+				E9C9D08B8B16C3BD1A3C8B22 /* Pods_Netopsy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B624E0241D6E3B1000D29B22 /* Netopsy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B624E0321D6E3B1000D29B22 /* Build configuration list for PBXNativeTarget "Netopsy" */;
+			buildPhases = (
+				9990FBCF2A8A55DB8B4FFE2B /* [CP] Check Pods Manifest.lock */,
+				B624E0211D6E3B1000D29B22 /* Sources */,
+				B624E0221D6E3B1000D29B22 /* Frameworks */,
+				B624E0231D6E3B1000D29B22 /* Resources */,
+				BB0265D2BF30F9EF7EDD9777 /* [CP] Embed Pods Frameworks */,
+				7DB621BD8AF81DB8C54F719C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Netopsy;
+			productName = Netopsy;
+			productReference = B624E0251D6E3B1000D29B22 /* Netopsy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B624E01D1D6E3B1000D29B22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Binocracy;
+				TargetAttributes = {
+					B624E0241D6E3B1000D29B22 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = SK4Y8NG3YD;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = B624E0201D6E3B1000D29B22 /* Build configuration list for PBXProject "Netopsy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B624E01C1D6E3B1000D29B22;
+			productRefGroup = B624E0261D6E3B1000D29B22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B624E0241D6E3B1000D29B22 /* Netopsy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B624E0231D6E3B1000D29B22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B667FA211D72583900E4E7C9 /* Main.storyboard in Resources */,
+				B624E02B1D6E3B1000D29B22 /* Assets.xcassets in Resources */,
+				B67AB3291DC1484400AC9D92 /* AppInfo.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DB621BD8AF81DB8C54F719C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9990FBCF2A8A55DB8B4FFE2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB0265D2BF30F9EF7EDD9777 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B624E0211D6E3B1000D29B22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B686C4D41D769EC700EE9065 /* MainViewController.swift in Sources */,
+				B6044EA21D7FE2C800DB825F /* SessionInfoViewController.swift in Sources */,
+				B667FA3E1D73F36B00E4E7C9 /* SessionListViewController.swift in Sources */,
+				B67F8F6A1D7D222B001519F0 /* HeaderListViewController.swift in Sources */,
+				B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */,
+				B67F8F6D1D7D27C2001519F0 /* BodyDisplayViewController.swift in Sources */,
+				B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */,
+				B624E0291D6E3B1000D29B22 /* AppDelegate.swift in Sources */,
+				B65E22171DB9DB5D002D9FDF /* Logger.swift in Sources */,
+				B686C4F41D76B3CC00EE9065 /* TraceDocument.swift in Sources */,
+				B69FD8691D9AEC5400A7D682 /* MainWindowController.swift in Sources */,
+				B672FF6B1D832C9000A4AA42 /* BodyViewController.swift in Sources */,
+				B624E03D1D6F700100D29B22 /* DataDeflating.swift in Sources */,
+				B6FC95F71DAB58BC0029C10C /* QueryDisplayViewController.swift in Sources */,
+				B672FF6D1D8343AF00A4AA42 /* ImageDisplayViewController.swift in Sources */,
+				B686C4D21D769ABA00EE9065 /* TraceReader.swift in Sources */,
+				B624E03B1D6F6B2900D29B22 /* Utils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B624E0301D6E3B1000D29B22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B624E0311D6E3B1000D29B22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		B624E0331D6E3B1000D29B22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEF6B7BCFB5B14A5EBBF726 /* Pods-Netopsy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = Netopsy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Netopsy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Netopsy/Netopsy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B624E0341D6E3B1000D29B22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78285773E1FF8D9C13569134 /* Pods-Netopsy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = Netopsy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Netopsy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Netopsy/Netopsy-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B624E0201D6E3B1000D29B22 /* Build configuration list for PBXProject "Netopsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B624E0301D6E3B1000D29B22 /* Debug */,
+				B624E0311D6E3B1000D29B22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B624E0321D6E3B1000D29B22 /* Build configuration list for PBXNativeTarget "Netopsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B624E0331D6E3B1000D29B22 /* Debug */,
+				B624E0341D6E3B1000D29B22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B624E01D1D6E3B1000D29B22 /* Project object */;
+}
