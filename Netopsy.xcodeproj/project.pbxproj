@@ -46,6 +46,7 @@
 		B624E03A1D6F6B2900D29B22 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		B624E03C1D6F700100D29B22 /* DataDeflating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDeflating.swift; sourceTree = "<group>"; };
 		B65E22161DB9DB5D002D9FDF /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B6646FEE1DC8657D0061E694 /* Netopsy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Netopsy.entitlements; sourceTree = "<group>"; };
 		B667FA201D72583900E4E7C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B667FA3D1D73F36B00E4E7C9 /* SessionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionListViewController.swift; sourceTree = "<group>"; };
 		B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		B624E0271D6E3B1000D29B22 /* Netopsy */ = {
 			isa = PBXGroup;
 			children = (
+				B6646FEE1DC8657D0061E694 /* Netopsy.entitlements */,
 				B624E0281D6E3B1000D29B22 /* AppDelegate.swift */,
 				B667FA201D72583900E4E7C9 /* Main.storyboard */,
 				B686C4D31D769EC700EE9065 /* MainViewController.swift */,
@@ -183,6 +185,11 @@
 						DevelopmentTeam = SK4Y8NG3YD;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -391,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Netopsy/Netopsy.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SK4Y8NG3YD;
@@ -410,13 +418,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_ENTITLEMENTS = Netopsy/Netopsy.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SK4Y8NG3YD;
 				INFOPLIST_FILE = Netopsy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Netopsy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e1ccefd9-1d30-4d59-930d-86d5ae7fb8a4";
+				PROVISIONING_PROFILE_SPECIFIER = "Netopsy Production Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Netopsy/Netopsy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
