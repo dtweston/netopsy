@@ -14,6 +14,7 @@ class QueryDisplayViewController: NSViewController, NSTableViewDataSource, NSTab
     var queryItems: [URLQueryItem]? {
         didSet {
             tableView?.reloadData()
+            tableView?.scrollRowToVisible(0)
         }
     }
 

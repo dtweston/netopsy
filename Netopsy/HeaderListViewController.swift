@@ -15,6 +15,7 @@ class HeaderListViewController: NSViewController {
     var headers: [(String, String)]? {
         didSet {
             tableView?.reloadData()
+            tableView?.scrollRowToVisible(0)
         }
     }
 

@@ -13,6 +13,7 @@ class BodyDisplayViewController: NSViewController {
     var bodyString: String? {
         didSet {
             textView?.string = bodyString ?? ""
+            textView?.scrollRangeToVisible(NSMakeRange(0, 0))
         }
     }
 
