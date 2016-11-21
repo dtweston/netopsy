@@ -12,15 +12,17 @@
 				<string>saz</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>DocumentIcon</string>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>Fiddler session archive</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>????</string>
 			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
 			<key>NSDocumentClass</key>
 			<string>$(PRODUCT_MODULE_NAME).TraceDocument</string>
 		</dict>

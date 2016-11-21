@@ -14,6 +14,7 @@
 		B624E0371D6F63DD00D29B22 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B624E0361D6F63DD00D29B22 /* libz.tbd */; };
 		B624E03B1D6F6B2900D29B22 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B624E03A1D6F6B2900D29B22 /* Utils.m */; };
 		B624E03D1D6F700100D29B22 /* DataDeflating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624E03C1D6F700100D29B22 /* DataDeflating.swift */; };
+		B63CCAD71DE2C121004FB179 /* DocumentIcon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = B63CCAD61DE2C121004FB179 /* DocumentIcon.iconset */; };
 		B65E22171DB9DB5D002D9FDF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E22161DB9DB5D002D9FDF /* Logger.swift */; };
 		B667FA211D72583900E4E7C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B667FA201D72583900E4E7C9 /* Main.storyboard */; };
 		B667FA3E1D73F36B00E4E7C9 /* SessionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B667FA3D1D73F36B00E4E7C9 /* SessionListViewController.swift */; };
@@ -45,6 +46,7 @@
 		B624E0391D6F6B2900D29B22 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		B624E03A1D6F6B2900D29B22 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		B624E03C1D6F700100D29B22 /* DataDeflating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDeflating.swift; sourceTree = "<group>"; };
+		B63CCAD61DE2C121004FB179 /* DocumentIcon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = DocumentIcon.iconset; sourceTree = "<group>"; };
 		B65E22161DB9DB5D002D9FDF /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B6646FEE1DC8657D0061E694 /* Netopsy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Netopsy.entitlements; sourceTree = "<group>"; };
 		B667FA201D72583900E4E7C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		B624E0271D6E3B1000D29B22 /* Netopsy */ = {
 			isa = PBXGroup;
 			children = (
+				B63CCAD61DE2C121004FB179 /* DocumentIcon.iconset */,
 				B6646FEE1DC8657D0061E694 /* Netopsy.entitlements */,
 				B624E0281D6E3B1000D29B22 /* AppDelegate.swift */,
 				B667FA201D72583900E4E7C9 /* Main.storyboard */,
@@ -219,6 +222,7 @@
 				B667FA211D72583900E4E7C9 /* Main.storyboard in Resources */,
 				B624E02B1D6E3B1000D29B22 /* Assets.xcassets in Resources */,
 				B67AB3291DC1484400AC9D92 /* AppInfo.plist in Resources */,
+				B63CCAD71DE2C121004FB179 /* DocumentIcon.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
