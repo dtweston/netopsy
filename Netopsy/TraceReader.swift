@@ -240,7 +240,7 @@ class TraceReader: NSObject {
                         }
                     }
                     else {
-                        LogParseE("Invalid converted URL: \(urlString)")
+                        LogParseE("Invalid converted URL: %@", urlString)
                     }
                 }
 
