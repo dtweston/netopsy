@@ -10,10 +10,17 @@ import Cocoa
 
 class BodyDisplayViewController: NSViewController {
 
-    var bodyString: String? {
+    var bodyContent: (() -> (String?))? = nil {
         didSet {
-            textView?.string = bodyString ?? ""
-            textView?.scrollRangeToVisible(NSMakeRange(0, 0))
+            if isViewLoaded {
+                updateContent()
+            }
+        }
+    }
+
+    func updateContent() {
+        if let content = bodyContent {
+            textView?.string = content() ?? ""
         }
     }
 
@@ -24,6 +31,7 @@ class BodyDisplayViewController: NSViewController {
         // Do view setup here.
 
         textView.font = NSFont.userFixedPitchFont(ofSize: 12)
-        textView.string = bodyString ?? ""
+
+        updateContent()
     }
 }

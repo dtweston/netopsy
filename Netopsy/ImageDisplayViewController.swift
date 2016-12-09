@@ -12,11 +12,20 @@ class ImageDisplayViewController: NSViewController {
 
     @IBOutlet weak var bodyImageView: NSImageView!
 
-    var image: NSImage? = nil {
+    var imageContent: (() -> (NSImage?))? = nil {
         didSet {
-            if let view = bodyImageView {
-                view.image = image
+            if isViewLoaded {
+                updateContent()
             }
+        }
+    }
+
+    func updateContent() {
+        if let content = imageContent {
+            bodyImageView.image = content()
+        }
+        else {
+            bodyImageView.image = nil
         }
     }
     
@@ -27,7 +36,7 @@ class ImageDisplayViewController: NSViewController {
         bodyImageView.animates = true
         bodyImageView.canDrawSubviewsIntoLayer = true
 
-        bodyImageView.image = image
+        updateContent()
     }
     
 }

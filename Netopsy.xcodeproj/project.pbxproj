@@ -29,6 +29,9 @@
 		B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688EF5B1D70AD4C005B313B /* RequestParser.swift */; };
 		B69FD8691D9AEC5400A7D682 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */; };
 		B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */; };
+		B6E26B131DF5E67A00457639 /* JSONBodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */; };
+		B6E26B151DF877D500457639 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B141DF877D500457639 /* JSONParser.swift */; };
+		B6E26B171DF9D84900457639 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B161DF9D84900457639 /* MessageViewModel.swift */; };
 		B6FA06C91DAEFC1000A11DB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FA06C81DAEFC1000A11DB7 /* QuartzCore.framework */; };
 		B6FC95F71DAB58BC0029C10C /* QueryDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,9 @@
 		B688EF5B1D70AD4C005B313B /* RequestParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParser.swift; sourceTree = "<group>"; };
 		B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceDocumentController.swift; sourceTree = "<group>"; };
+		B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONBodyViewController.swift; sourceTree = "<group>"; };
+		B6E26B141DF877D500457639 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		B6E26B161DF9D84900457639 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		B6FA06C81DAEFC1000A11DB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDisplayViewController.swift; sourceTree = "<group>"; };
 		E9C9D08B8B16C3BD1A3C8B22 /* Pods_Netopsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netopsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,9 @@
 				B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */,
 				B65E22161DB9DB5D002D9FDF /* Logger.swift */,
 				B67AB3281DC1484400AC9D92 /* AppInfo.plist */,
+				B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */,
+				B6E26B141DF877D500457639 /* JSONParser.swift */,
+				B6E26B161DF9D84900457639 /* MessageViewModel.swift */,
 			);
 			path = Netopsy;
 			sourceTree = "<group>";
@@ -281,10 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E26B151DF877D500457639 /* JSONParser.swift in Sources */,
 				B686C4D41D769EC700EE9065 /* MainViewController.swift in Sources */,
+				B6E26B171DF9D84900457639 /* MessageViewModel.swift in Sources */,
 				B6044EA21D7FE2C800DB825F /* SessionInfoViewController.swift in Sources */,
 				B667FA3E1D73F36B00E4E7C9 /* SessionListViewController.swift in Sources */,
 				B67F8F6A1D7D222B001519F0 /* HeaderListViewController.swift in Sources */,
+				B6E26B131DF5E67A00457639 /* JSONBodyViewController.swift in Sources */,
 				B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */,
 				B67F8F6D1D7D27C2001519F0 /* BodyDisplayViewController.swift in Sources */,
 				B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */,
