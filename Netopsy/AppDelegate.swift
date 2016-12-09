@@ -24,12 +24,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if let hockey = BITHockeyManager.shared() {
                 hockey.configure(withIdentifier:hockeyAppId)
                 hockey.start()
+                hockey.metricsManager?.trackEvent(withName: "app-start")
             }
         }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+
+    @IBAction func showFeedback(_ sender: Any?) {
+        BITHockeyManager.shared()?.feedbackManager?.showFeedbackWindow()
     }
 }
 
