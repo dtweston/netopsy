@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import HockeySDK
 
 enum LogLevel: Int {
     case Critical = 0
@@ -29,5 +30,9 @@ func LogParseE(_ format: String) {
 
 func LogParseD(_ format: String) {
     LOG(level: .Debug, domain: "parse", format: format)
+}
+
+func LogEvent(_ name: String, properties: [String: String]? = nil, measurements: [String: NSNumber]? = nil) {
+    BITHockeyManager.shared().metricsManager.trackEvent(withName: name, properties: properties, measurements: measurements)
 }
 

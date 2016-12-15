@@ -62,8 +62,10 @@ class Trace {
             do {
                 try zipFile.goToFirstFileInZipWithError()
             }
-            catch {
+            catch let ex {
+                LogEvent("no-sessions")
                 LogParseE("Unable to find first session in trace at: '\(path)'")
+                throw ex
             }
 
             var done = false
@@ -91,9 +93,11 @@ class Trace {
                                     break
                                 }
                             } else {
+                                LogEvent("session-fetch-error")
                                 LogParseE("Unable to fetch data for portion: \(nsPath)")
                             }
                         } else {
+                            LogEvent("missing-session")
                             LogParseE("Unable to get session number for portion: `\(nsPath)'")
                         }
 
@@ -110,6 +114,7 @@ class Trace {
                     }
                 }
                 catch {
+                    LogEvent("read-exception")
                     LogParseE("Unable to read session in trace at: '\(path)'")
                 }
             }
@@ -193,13 +198,16 @@ class TraceReader: NSObject {
                         }
                     }
                     else {
+                        LogEvent("request-invalid-converted-url")
                         LogParseE("Invalid converted URL: \(urlString)")
                     }
                 }
 
+                LogEvent("request-invalid-url")
                 LogParseE("Invalid URL: \(basics[1])")
             }
             else {
+                LogEvent("request-line-unknown", measurements: ["count": NSNumber(value: basics.count)])
                 LogParseE("Wrong number of components (\(basics.count)) in first line of request")
             }
         }
@@ -239,13 +247,16 @@ class TraceReader: NSObject {
                         }
                     }
                     else {
-                        LogParseE("Invalid converted URL: %@", urlString)
+                        LogEvent("request-invalid-converted-url")
+                        LogParseE("Invalid converted URL: \(urlString)")
                     }
                 }
 
+                LogEvent("request-invalid-url")
                 LogParseE("Invalid URL: \(basics[1])")
             }
             else {
+                LogEvent("request-line-unknown", measurements: ["count": NSNumber(value: basics.count)])
                 LogParseE("Wrong number of components (\(basics.count)) in first line of request")
             }
         }
@@ -261,10 +272,12 @@ class TraceReader: NSObject {
                 return (Int(basics[1]) ?? 0, basics.suffix(from: 2).joined(separator: " "))
             }
             else {
+                LogEvent("response-line-unknown", measurements: ["count": NSNumber(value: basics.count)])
                 LogParseE("Not enough components in response first line")
             }
         }
         else {
+            LogEvent("response-line-missing")
             LogParseE("Unable to find first line")
         }
 
@@ -286,6 +299,7 @@ class TraceReader: NSObject {
                 return ResponseMessage(version: basics[0], statusCode: Int(basics[1]) ?? 0, statusText: basics.suffix(from: 2).joined(separator: " "), headers: message.headers, originalBody: message.originalBody)
             }
             else {
+                LogEvent("response-line-unknown", measurements: ["count": NSNumber(value: basics.count)])
                 LogParseE("Too many components in start line")
             }
         }

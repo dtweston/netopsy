@@ -80,6 +80,7 @@ class HttpMessageParser {
                 }
             }
             else {
+                LogEvent("headers-not-utf8")
                 LogParseE("Unable to parse headers as utf8 string")
             }
 
