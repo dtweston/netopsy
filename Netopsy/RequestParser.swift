@@ -51,46 +51,6 @@ extension HttpMessage: CustomDebugStringConvertible {
     }
 }
 
-extension HttpMessage {
-    var unchunkedData: Data? {
-        var retData = Data()
-        if let oRange = originalBody.range(of: HttpMessageParser.lineSeparator) {
-            let lenData = originalBody.subdata(in: originalBody.startIndex..<oRange.lowerBound)
-            if let lenStr = String(data: lenData, encoding: .utf8),
-                let len = Int(lenStr, radix: 16) {
-
-                if len > 0 {
-                    let upperIndex = originalBody.index(oRange.upperBound, offsetBy: len)
-                    let chunkData = originalBody.subdata(in: oRange.upperBound..<upperIndex)
-
-                    retData.append(chunkData)
-                }
-            }
-        }
-
-        return retData
-    }
-
-    var inflatedData: Data? {
-        if let oRange = originalBody.range(of: HttpMessageParser.lineSeparator),
-            let gzipRange = originalBody.range(of: HttpMessageParser.lineSeparator, options: .backwards, in: originalBody.startIndex..<originalBody.endIndex) {
-
-            if gzipRange.lowerBound > oRange.upperBound {
-                var gzipData = originalBody.subdata(in: oRange.upperBound..<gzipRange.lowerBound)
-
-                do {
-                    return try gzipData.bbs_dataByInflating()
-                }
-                catch {
-                    LogParseE("Unable to inflate message body")
-                }
-            }
-        }
-        
-        return nil
-    }
-}
-
 class HttpMessageParser {
     static let lineSeparator = "\r\n".data(using: .utf8)!
     static let doubleLineSeparator = "\r\n\r\n".data(using:.utf8)!

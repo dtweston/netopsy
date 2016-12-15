@@ -106,7 +106,6 @@ class Trace {
                         try zipFile.goToNextFileInZipWithError()
                     }
                     catch {
-                        LogParseE("Unable to find next session in trace at: '\(path)'")
                         done = true
                     }
                 }
