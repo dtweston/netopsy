@@ -7,12 +7,13 @@
 //
 
 import Cocoa
+import Parsing
 
 class HeaderListViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
 
-    var headers: [(String, String)]? {
+    var headers: MessageHeaders? {
         didSet {
             tableView?.reloadData()
             tableView?.scrollRowToVisible(0)
@@ -22,6 +23,11 @@ class HeaderListViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+    }
+
+    deinit {
+        tableView?.dataSource = nil
+        tableView?.delegate = nil
     }
 }
 

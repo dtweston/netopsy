@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Parsing
 
 class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
 
@@ -78,9 +79,7 @@ class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
         }
 
         if let req = message as? RequestMessage {
-            if let components = URLComponents(url: req.url, resolvingAgainstBaseURL: false),
-                let queryItems = components.queryItems, queryItems.count > 0 {
-
+            if let queryItems = req.url.queryItems, queryItems.count > 0 {
                 queryList.queryItems = queryItems
                 tabViewController.enableItem(at: 1)
             }

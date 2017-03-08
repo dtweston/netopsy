@@ -7,9 +7,16 @@
 //
 
 import Cocoa
+import Parsing
 
 class MainViewController: NSSplitViewController, SessionListViewControllerDelegate {
 
+    var trace: ITrace? = nil {
+        didSet {
+            sessionListVC?.trace = trace
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -27,5 +34,9 @@ class MainViewController: NSSplitViewController, SessionListViewControllerDelega
         }
     }
 
-    
+    func traceDidAddSession(_ trace: RecordingTrace) {
+        DispatchQueue.main.async {
+            self.sessionListVC?.sessions = trace.sessions
+        }
+    }
 }

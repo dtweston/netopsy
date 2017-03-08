@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Parsing
 
 class SessionInfoViewController: NSViewController {
 
@@ -25,10 +26,14 @@ class SessionInfoViewController: NSViewController {
 
     var session: SessionIndex? {
         didSet {
-            if let url = session?.request?.url {
-                var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-                components?.query = nil
-                urlField.stringValue = components?.string ?? ""
+            if var components = session?.request?.url {
+                components.query = nil
+                if let tunnel = session?.isTunnel, tunnel {
+                    urlField.stringValue = "\(components.host ?? ""):\(components.port ?? 80)"
+                }
+                else {
+                    urlField.stringValue = components.string ?? ""
+                }
             }
             methodLabel.stringValue = session?.request?.method ?? ""
             if let code = session?.response?.statusCode {
@@ -39,18 +44,18 @@ class SessionInfoViewController: NSViewController {
             }
 
             if let session = session {
-                if let rq = session.request {
-                    let req = traceReader.request(from: session.trace, at: rq.path)
-                    requestHeadersVC?.headers = req?.headers
+                if let rq = session.request,
+                    let req = session.trace.requestInfo(for: rq, traceReader: traceReader) {
+                    requestHeadersVC?.headers = req.headers
                     requestBodyVC?.message = req
                 }
                 else {
                     requestHeadersVC?.headers = nil
                     requestBodyVC?.message = nil
                 }
-                if let rs = session.response {
-                    let resp = traceReader.response(from: session.trace, at: rs.path)
-                    responseHeadersVC?.headers = resp?.headers
+                if let rs = session.response,
+                    let resp = session.trace.responseInfo(for: rs, traceReader: traceReader) {
+                    responseHeadersVC?.headers = resp.headers
                     responseBodyVC?.message = resp
                 }
                 else {
@@ -90,10 +95,10 @@ class SessionInfoViewController: NSViewController {
     @IBAction func exportToCurl(_ sender: AnyObject) {
         if let sess = session,
             let rq = sess.request,
-            let req = traceReader.request(from: sess.trace, at: rq.path) {
+            let req = sess.trace.requestInfo(for: rq, traceReader: traceReader) {
 
             let curlCommand = CurlCommandWriter().curlCommand(for: req)
-            let pboard = NSPasteboard.general()
+            let pboard = NSPasteboard.general
             pboard.clearContents()
             pboard.writeObjects([curlCommand as NSString])
         }

@@ -7,45 +7,229 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BAC3AD07FF85CB05B4EB3C0 /* Pods_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845A00873BB02D0EE484F55A /* Pods_Base.framework */; };
 		AB373756BE237F8D9B8DB21D /* Pods_Netopsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C9D08B8B16C3BD1A3C8B22 /* Pods_Netopsy.framework */; };
+		B261DA5D46C6BA0CA53D00FB /* Pods_Proxying.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E40988E8E8220608AB2F26 /* Pods_Proxying.framework */; };
 		B6044EA21D7FE2C800DB825F /* SessionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6044EA01D7FE2C800DB825F /* SessionInfoViewController.swift */; };
+		B6205E581EA89301005BFF45 /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6205D991EA87650005BFF45 /* OpenSSL.framework */; };
+		B6205E5B1EA89610005BFF45 /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6205D991EA87650005BFF45 /* OpenSSL.framework */; };
+		B6205E6E1EA95901005BFF45 /* CRTOpenSSLErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = B6205E6C1EA95901005BFF45 /* CRTOpenSSLErrors.h */; };
+		B6205E6F1EA95901005BFF45 /* CRTOpenSSLErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = B6205E6D1EA95901005BFF45 /* CRTOpenSSLErrors.m */; };
 		B621BCB01E6FDD6400CFDD77 /* CurlCommandWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621BCAF1E6FDD6400CFDD77 /* CurlCommandWriter.swift */; };
 		B624E0291D6E3B1000D29B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624E0281D6E3B1000D29B22 /* AppDelegate.swift */; };
 		B624E02B1D6E3B1000D29B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B624E02A1D6E3B1000D29B22 /* Assets.xcassets */; };
 		B624E0371D6F63DD00D29B22 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B624E0361D6F63DD00D29B22 /* libz.tbd */; };
-		B624E03B1D6F6B2900D29B22 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B624E03A1D6F6B2900D29B22 /* Utils.m */; };
 		B624E03D1D6F700100D29B22 /* DataDeflating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624E03C1D6F700100D29B22 /* DataDeflating.swift */; };
+		B627DFF21E5041C90026F18A /* TLSBodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B627DFF11E5041C90026F18A /* TLSBodyViewController.swift */; };
+		B628B6EA1EA7D85E005B8B32 /* Parsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628B6E11EA7D85E005B8B32 /* Parsing.framework */; };
+		B628B6F11EA7D85E005B8B32 /* ParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628B6F01EA7D85E005B8B32 /* ParsingTests.swift */; };
+		B628B6F61EA7D85E005B8B32 /* Parsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628B6E11EA7D85E005B8B32 /* Parsing.framework */; };
+		B628B6F71EA7D85E005B8B32 /* Parsing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B628B6E11EA7D85E005B8B32 /* Parsing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B628B70C1EA7D88C005B8B32 /* Certificates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628B7031EA7D88C005B8B32 /* Certificates.framework */; };
+		B628B7131EA7D88C005B8B32 /* CertificateStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628B7121EA7D88C005B8B32 /* CertificateStoreTests.swift */; };
+		B628B7181EA7D88D005B8B32 /* Certificates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628B7031EA7D88C005B8B32 /* Certificates.framework */; };
+		B628B7191EA7D88D005B8B32 /* Certificates.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B628B7031EA7D88C005B8B32 /* Certificates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B628B7201EA7D8A7005B8B32 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B141DF877D500457639 /* JSONParser.swift */; };
+		B628B7221EA7D8C5005B8B32 /* TraceReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686C4D11D769ABA00EE9065 /* TraceReader.swift */; };
+		B628B7231EA7D8C5005B8B32 /* RequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688EF5B1D70AD4C005B313B /* RequestParser.swift */; };
+		B628B7241EA7D8C5005B8B32 /* ByteReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D859C21E56A1ED004977D3 /* ByteReader.swift */; };
+		B628B7251EA7D8C5005B8B32 /* TLSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D859C41E56A501004977D3 /* TLSParser.swift */; };
+		B628B7261EA7D8C5005B8B32 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D859CA1E56E224004977D3 /* Hello.swift */; };
+		B628B7271EA7D8C5005B8B32 /* CipherSuites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D859C61E56B252004977D3 /* CipherSuites.swift */; };
+		B628B7281EA7D8C5005B8B32 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D859C81E56DAF8004977D3 /* Extensions.swift */; };
+		B628B7291EA7D9A7005B8B32 /* SSLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F5F4BA1E972D2800586EE2 /* SSLWrapper.swift */; };
+		B628B72A1EA7D9A7005B8B32 /* CertificateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65157E31EA00FB1001B5A7D /* CertificateStore.swift */; };
+		B628B73A1EA7D9CC005B8B32 /* Proxying.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628B7311EA7D9CC005B8B32 /* Proxying.framework */; };
+		B628B7411EA7D9CC005B8B32 /* ProxyingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628B7401EA7D9CC005B8B32 /* ProxyingTests.swift */; };
+		B628B7461EA7D9CC005B8B32 /* Proxying.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628B7311EA7D9CC005B8B32 /* Proxying.framework */; };
+		B628B7471EA7D9CC005B8B32 /* Proxying.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B628B7311EA7D9CC005B8B32 /* Proxying.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B628B7541EA7DCB9005B8B32 /* CertificateViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = B628B7521EA7DCB9005B8B32 /* CertificateViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B628B7551EA7DCB9005B8B32 /* CertificateViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = B628B7531EA7DCB9005B8B32 /* CertificateViewer.m */; };
+		B628B7571EA7DD33005B8B32 /* Certificates.h in Headers */ = {isa = PBXBuildFile; fileRef = B628B7561EA7DCD5005B8B32 /* Certificates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B628B7661EA7DEAB005B8B32 /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628B75D1EA7DEAA005B8B32 /* Base.framework */; };
+		B628B76D1EA7DEAB005B8B32 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628B76C1EA7DEAB005B8B32 /* BaseTests.swift */; };
+		B628B7721EA7DEAB005B8B32 /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628B75D1EA7DEAA005B8B32 /* Base.framework */; };
+		B628B7731EA7DEAB005B8B32 /* Base.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B628B75D1EA7DEAA005B8B32 /* Base.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B628B77C1EA7E226005B8B32 /* ProxyListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60368AF1E1D879100E48D12 /* ProxyListener.swift */; };
+		B628B77D1EA7E230005B8B32 /* Proxying.h in Headers */ = {isa = PBXBuildFile; fileRef = B628B75F1EA7DEAA005B8B32 /* Proxying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B628B7811EA7E2E8005B8B32 /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = B628B7801EA7E2E8005B8B32 /* Base.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B628B7821EA7E2FB005B8B32 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E22161DB9DB5D002D9FDF /* Logger.swift */; };
 		B63CCAD71DE2C121004FB179 /* DocumentIcon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = B63CCAD61DE2C121004FB179 /* DocumentIcon.iconset */; };
-		B65E22171DB9DB5D002D9FDF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E22161DB9DB5D002D9FDF /* Logger.swift */; };
+		B665D6671E39DEBC004DA716 /* ProxyConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = B665D6661E39DEBC004DA716 /* ProxyConfigurator.m */; };
 		B667FA211D72583900E4E7C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B667FA201D72583900E4E7C9 /* Main.storyboard */; };
 		B667FA3E1D73F36B00E4E7C9 /* SessionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B667FA3D1D73F36B00E4E7C9 /* SessionListViewController.swift */; };
+		B66A42B21FFB674100EB7003 /* ImageDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66A42AD1FFB674000EB7003 /* ImageDisplayViewController.xib */; };
+		B66A42B31FFB674100EB7003 /* QueryDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66A42AF1FFB674000EB7003 /* QueryDisplayViewController.xib */; };
+		B66A42B41FFB674100EB7003 /* BodyDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66A42B01FFB674100EB7003 /* BodyDisplayViewController.xib */; };
+		B66A42B51FFB674100EB7003 /* JSONBodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66A42B11FFB674100EB7003 /* JSONBodyViewController.xib */; };
 		B672FF6B1D832C9000A4AA42 /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */; };
 		B672FF6D1D8343AF00A4AA42 /* ImageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672FF6C1D8343AF00A4AA42 /* ImageDisplayViewController.swift */; };
-		B67AB3291DC1484400AC9D92 /* AppInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = B67AB3281DC1484400AC9D92 /* AppInfo.plist */; };
 		B67F8F6A1D7D222B001519F0 /* HeaderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F8F691D7D222B001519F0 /* HeaderListViewController.swift */; };
 		B67F8F6D1D7D27C2001519F0 /* BodyDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F8F6B1D7D27C2001519F0 /* BodyDisplayViewController.swift */; };
-		B686C4D21D769ABA00EE9065 /* TraceReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686C4D11D769ABA00EE9065 /* TraceReader.swift */; };
 		B686C4D41D769EC700EE9065 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686C4D31D769EC700EE9065 /* MainViewController.swift */; };
 		B686C4F41D76B3CC00EE9065 /* TraceDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686C4F31D76B3CC00EE9065 /* TraceDocument.swift */; };
-		B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688EF5B1D70AD4C005B313B /* RequestParser.swift */; };
 		B69FD8691D9AEC5400A7D682 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */; };
 		B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */; };
 		B6C447F31F670B2F001A1C19 /* CustomTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C447F21F670B2D001A1C19 /* CustomTabViewController.swift */; };
-		B6C447F91F672ADD001A1C19 /* QueryDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447F81F672ADD001A1C19 /* QueryDisplayViewController.xib */; };
-		B6C447FB1F672B9E001A1C19 /* BodyDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */; };
-		B6C447FD1F672BEA001A1C19 /* ImageDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447FC1F672BEA001A1C19 /* ImageDisplayViewController.xib */; };
-		B6C447FF1F672C31001A1C19 /* JSONBodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447FE1F672C31001A1C19 /* JSONBodyViewController.xib */; };
+		B6E0F5691E9C5AB700136AE1 /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E0F5681E9C5AB700136AE1 /* SecurityInterface.framework */; };
 		B6E26B131DF5E67A00457639 /* JSONBodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */; };
-		B6E26B151DF877D500457639 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B141DF877D500457639 /* JSONParser.swift */; };
 		B6E26B171DF9D84900457639 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B161DF9D84900457639 /* MessageViewModel.swift */; };
 		B6FA06C91DAEFC1000A11DB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FA06C81DAEFC1000A11DB7 /* QuartzCore.framework */; };
 		B6FC95F71DAB58BC0029C10C /* QueryDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */; };
+		BA7867C7E4AF4F0AD394DB1F /* Pods_Parsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E97A419EF79A9A14CEFBA21 /* Pods_Parsing.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		B6205E6A1EA93607005BFF45 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		B6205D711EA8715E005BFF45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B628B7D41EA8710A005B8B32 /* openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9069D28C0FCE659A0042E34C;
+			remoteInfo = crypto;
+		};
+		B6205D981EA87650005BFF45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B628B7D41EA8710A005B8B32 /* openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B6205D781EA87393005BFF45;
+			remoteInfo = openssl;
+		};
+		B6205E561EA89234005BFF45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B628B7D41EA8710A005B8B32 /* openssl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B6205D771EA87393005BFF45;
+			remoteInfo = OpenSSL;
+		};
+		B6205E591EA8938E005BFF45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B7021EA7D88C005B8B32;
+			remoteInfo = Certificates;
+		};
+		B628B6EB1EA7D85E005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B6E01EA7D85E005B8B32;
+			remoteInfo = Parsing;
+		};
+		B628B6F41EA7D85E005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B6E01EA7D85E005B8B32;
+			remoteInfo = Parsing;
+		};
+		B628B70D1EA7D88C005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B7021EA7D88C005B8B32;
+			remoteInfo = Certificates;
+		};
+		B628B7161EA7D88D005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B7021EA7D88C005B8B32;
+			remoteInfo = Certificates;
+		};
+		B628B73B1EA7D9CC005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B7301EA7D9CC005B8B32;
+			remoteInfo = Proxying;
+		};
+		B628B7441EA7D9CC005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B7301EA7D9CC005B8B32;
+			remoteInfo = Proxying;
+		};
+		B628B7671EA7DEAB005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B75C1EA7DEAA005B8B32;
+			remoteInfo = Base;
+		};
+		B628B7691EA7DEAB005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B624E0241D6E3B1000D29B22;
+			remoteInfo = Netopsy;
+		};
+		B628B7701EA7DEAB005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B75C1EA7DEAA005B8B32;
+			remoteInfo = Base;
+		};
+		B628B77A1EA7E0E4005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B75C1EA7DEAA005B8B32;
+			remoteInfo = Base;
+		};
+		B628B77E1EA7E25C005B8B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B624E01D1D6E3B1000D29B22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B628B6E01EA7D85E005B8B32;
+			remoteInfo = Parsing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B628B6C61EA7D82D005B8B32 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B628B7191EA7D88D005B8B32 /* Certificates.framework in Embed Frameworks */,
+				B628B7731EA7DEAB005B8B32 /* Base.framework in Embed Frameworks */,
+				B628B6F71EA7D85E005B8B32 /* Parsing.framework in Embed Frameworks */,
+				B628B7471EA7D9CC005B8B32 /* Proxying.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0975D371D9BA2FCA354EB5EB /* Pods-Proxying.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxying.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Proxying/Pods-Proxying.debug.xcconfig"; sourceTree = "<group>"; };
 		1BEF6B7BCFB5B14A5EBBF726 /* Pods-Netopsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netopsy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy.debug.xcconfig"; sourceTree = "<group>"; };
+		1E97A419EF79A9A14CEFBA21 /* Pods_Parsing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parsing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B40FC0F145ABF60763D73C6 /* Pods-Parsing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parsing.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parsing/Pods-Parsing.release.xcconfig"; sourceTree = "<group>"; };
+		76E40988E8E8220608AB2F26 /* Pods_Proxying.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proxying.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78285773E1FF8D9C13569134 /* Pods-Netopsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netopsy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy.release.xcconfig"; sourceTree = "<group>"; };
+		845A00873BB02D0EE484F55A /* Pods_Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7D0F4A3A0C1475440DD5051 /* Pods-Proxying.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxying.release.xcconfig"; path = "Pods/Target Support Files/Pods-Proxying/Pods-Proxying.release.xcconfig"; sourceTree = "<group>"; };
+		B32EB00E2101B0FB02F01014 /* Pods-Base.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Base/Pods-Base.debug.xcconfig"; sourceTree = "<group>"; };
+		B60368AF1E1D879100E48D12 /* ProxyListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyListener.swift; sourceTree = "<group>"; };
 		B6044EA01D7FE2C800DB825F /* SessionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInfoViewController.swift; sourceTree = "<group>"; };
+		B6205E6C1EA95901005BFF45 /* CRTOpenSSLErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTOpenSSLErrors.h; sourceTree = "<group>"; };
+		B6205E6D1EA95901005BFF45 /* CRTOpenSSLErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTOpenSSLErrors.m; sourceTree = "<group>"; };
+		B6205E711EA963DB005BFF45 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Internal/module.modulemap; sourceTree = "<group>"; };
 		B621BCAF1E6FDD6400CFDD77 /* CurlCommandWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurlCommandWriter.swift; sourceTree = "<group>"; };
 		B624E0251D6E3B1000D29B22 /* Netopsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netopsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B624E0281D6E3B1000D29B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,17 +237,49 @@
 		B624E02F1D6E3B1000D29B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B624E0361D6F63DD00D29B22 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B624E0381D6F6B2800D29B22 /* Netopsy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Netopsy-Bridging-Header.h"; sourceTree = "<group>"; };
-		B624E0391D6F6B2900D29B22 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		B624E03A1D6F6B2900D29B22 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		B624E03C1D6F700100D29B22 /* DataDeflating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDeflating.swift; sourceTree = "<group>"; };
+		B627DFF11E5041C90026F18A /* TLSBodyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLSBodyViewController.swift; sourceTree = "<group>"; };
+		B628B6E11EA7D85E005B8B32 /* Parsing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Parsing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B628B6E91EA7D85E005B8B32 /* ParsingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParsingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B628B6F01EA7D85E005B8B32 /* ParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingTests.swift; sourceTree = "<group>"; };
+		B628B6F21EA7D85E005B8B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B628B7031EA7D88C005B8B32 /* Certificates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Certificates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B628B70B1EA7D88C005B8B32 /* CertificatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CertificatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B628B7121EA7D88C005B8B32 /* CertificateStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateStoreTests.swift; sourceTree = "<group>"; };
+		B628B7141EA7D88D005B8B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B628B7311EA7D9CC005B8B32 /* Proxying.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Proxying.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B628B7341EA7D9CC005B8B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B628B7391EA7D9CC005B8B32 /* ProxyingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProxyingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B628B7401EA7D9CC005B8B32 /* ProxyingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyingTests.swift; sourceTree = "<group>"; };
+		B628B7421EA7D9CC005B8B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B628B74E1EA7DC1E005B8B32 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B628B7501EA7DC24005B8B32 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B628B7521EA7DCB9005B8B32 /* CertificateViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificateViewer.h; sourceTree = "<group>"; };
+		B628B7531EA7DCB9005B8B32 /* CertificateViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificateViewer.m; sourceTree = "<group>"; };
+		B628B7561EA7DCD5005B8B32 /* Certificates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Certificates.h; sourceTree = "<group>"; };
+		B628B75D1EA7DEAA005B8B32 /* Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B628B75F1EA7DEAA005B8B32 /* Proxying.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proxying.h; sourceTree = "<group>"; };
+		B628B7601EA7DEAA005B8B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B628B7651EA7DEAA005B8B32 /* BaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B628B76C1EA7DEAB005B8B32 /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseTests.swift; path = BaseTests/BaseTests.swift; sourceTree = SOURCE_ROOT; };
+		B628B76E1EA7DEAB005B8B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B628B7801EA7E2E8005B8B32 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		B628B7D21EA7EC21005B8B32 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = openssl.framework; path = External/OpenSSL/Frameworks/macos/openssl.framework; sourceTree = "<group>"; };
+		B628B7D41EA8710A005B8B32 /* openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = openssl.xcodeproj; sourceTree = "<group>"; };
 		B63CCAD61DE2C121004FB179 /* DocumentIcon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = DocumentIcon.iconset; sourceTree = "<group>"; };
+		B65157E31EA00FB1001B5A7D /* CertificateStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificateStore.swift; sourceTree = "<group>"; };
 		B65E22161DB9DB5D002D9FDF /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B6646FEE1DC8657D0061E694 /* Netopsy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Netopsy.entitlements; sourceTree = "<group>"; };
+		B665D6651E39DEBC004DA716 /* ProxyConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProxyConfigurator.h; sourceTree = "<group>"; };
+		B665D6661E39DEBC004DA716 /* ProxyConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProxyConfigurator.m; sourceTree = "<group>"; };
 		B667FA201D72583900E4E7C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B667FA3D1D73F36B00E4E7C9 /* SessionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionListViewController.swift; sourceTree = "<group>"; };
+		B66A42AD1FFB674000EB7003 /* ImageDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDisplayViewController.xib; sourceTree = "<group>"; };
+		B66A42AF1FFB674000EB7003 /* QueryDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryDisplayViewController.xib; sourceTree = "<group>"; };
+		B66A42B01FFB674100EB7003 /* BodyDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BodyDisplayViewController.xib; sourceTree = "<group>"; };
+		B66A42B11FFB674100EB7003 /* JSONBodyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSONBodyViewController.xib; sourceTree = "<group>"; };
 		B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
 		B672FF6C1D8343AF00A4AA42 /* ImageDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDisplayViewController.swift; sourceTree = "<group>"; };
-		B67AB3281DC1484400AC9D92 /* AppInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppInfo.plist; sourceTree = "<group>"; };
 		B67F8F691D7D222B001519F0 /* HeaderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderListViewController.swift; sourceTree = "<group>"; };
 		B67F8F6B1D7D27C2001519F0 /* BodyDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyDisplayViewController.swift; sourceTree = "<group>"; };
 		B686C4D11D769ABA00EE9065 /* TraceReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceReader.swift; sourceTree = "<group>"; };
@@ -73,16 +289,25 @@
 		B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceDocumentController.swift; sourceTree = "<group>"; };
 		B6C447F21F670B2D001A1C19 /* CustomTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewController.swift; sourceTree = "<group>"; };
-		B6C447F81F672ADD001A1C19 /* QueryDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryDisplayViewController.xib; sourceTree = "<group>"; };
-		B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyDisplayViewController.xib; sourceTree = "<group>"; };
-		B6C447FC1F672BEA001A1C19 /* ImageDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDisplayViewController.xib; sourceTree = "<group>"; };
-		B6C447FE1F672C31001A1C19 /* JSONBodyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSONBodyViewController.xib; sourceTree = "<group>"; };
+		B6D859C21E56A1ED004977D3 /* ByteReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteReader.swift; sourceTree = "<group>"; };
+		B6D859C41E56A501004977D3 /* TLSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLSParser.swift; sourceTree = "<group>"; };
+		B6D859C61E56B252004977D3 /* CipherSuites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CipherSuites.swift; sourceTree = "<group>"; };
+		B6D859C81E56DAF8004977D3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B6D859CA1E56E224004977D3 /* Hello.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
+		B6E0F5681E9C5AB700136AE1 /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = System/Library/Frameworks/SecurityInterface.framework; sourceTree = SDKROOT; };
 		B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONBodyViewController.swift; sourceTree = "<group>"; };
 		B6E26B141DF877D500457639 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		B6E26B161DF9D84900457639 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		B6F5F4B41E9622F500586EE2 /* netopsy-proxy-cert.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "netopsy-proxy-cert.p12"; sourceTree = "<group>"; };
+		B6F5F4B81E96A8DD00586EE2 /* netopsy-yammer-mitm-cert.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "netopsy-yammer-mitm-cert.p12"; sourceTree = "<group>"; };
+		B6F5F4BA1E972D2800586EE2 /* SSLWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLWrapper.swift; sourceTree = "<group>"; };
+		B6F5F4BE1E97784200586EE2 /* netopsy-yammer-mitm-cert2.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "netopsy-yammer-mitm-cert2.p12"; sourceTree = "<group>"; };
 		B6FA06C81DAEFC1000A11DB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDisplayViewController.swift; sourceTree = "<group>"; };
+		BDFCA15C37145DBFEC3E6463 /* Pods_Certificates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Certificates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA344E4C12514F739794E903 /* Pods-Parsing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parsing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parsing/Pods-Parsing.debug.xcconfig"; sourceTree = "<group>"; };
 		E9C9D08B8B16C3BD1A3C8B22 /* Pods_Netopsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netopsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCE4CD84C6D53B9C45284B4 /* Pods-Base.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.release.xcconfig"; path = "Pods/Target Support Files/Pods-Base/Pods-Base.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +315,79 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6205E581EA89301005BFF45 /* OpenSSL.framework in Frameworks */,
+				B6E0F5691E9C5AB700136AE1 /* SecurityInterface.framework in Frameworks */,
 				B6FA06C91DAEFC1000A11DB7 /* QuartzCore.framework in Frameworks */,
+				B628B7461EA7D9CC005B8B32 /* Proxying.framework in Frameworks */,
 				B624E0371D6F63DD00D29B22 /* libz.tbd in Frameworks */,
+				B628B6F61EA7D85E005B8B32 /* Parsing.framework in Frameworks */,
+				B628B7721EA7DEAB005B8B32 /* Base.framework in Frameworks */,
+				B628B7181EA7D88D005B8B32 /* Certificates.framework in Frameworks */,
 				AB373756BE237F8D9B8DB21D /* Pods_Netopsy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B6DD1EA7D85E005B8B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7867C7E4AF4F0AD394DB1F /* Pods_Parsing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B6E61EA7D85E005B8B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B6EA1EA7D85E005B8B32 /* Parsing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B6FF1EA7D88C005B8B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6205E5B1EA89610005BFF45 /* OpenSSL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7081EA7D88C005B8B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B70C1EA7D88C005B8B32 /* Certificates.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B72D1EA7D9CC005B8B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B261DA5D46C6BA0CA53D00FB /* Pods_Proxying.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7361EA7D9CC005B8B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B73A1EA7D9CC005B8B32 /* Proxying.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7591EA7DEAA005B8B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAC3AD07FF85CB05B4EB3C0 /* Pods_Base.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7621EA7DEAA005B8B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B7661EA7DEAB005B8B32 /* Base.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,14 +399,37 @@
 			children = (
 				1BEF6B7BCFB5B14A5EBBF726 /* Pods-Netopsy.debug.xcconfig */,
 				78285773E1FF8D9C13569134 /* Pods-Netopsy.release.xcconfig */,
+				CA344E4C12514F739794E903 /* Pods-Parsing.debug.xcconfig */,
+				2B40FC0F145ABF60763D73C6 /* Pods-Parsing.release.xcconfig */,
+				0975D371D9BA2FCA354EB5EB /* Pods-Proxying.debug.xcconfig */,
+				A7D0F4A3A0C1475440DD5051 /* Pods-Proxying.release.xcconfig */,
+				B32EB00E2101B0FB02F01014 /* Pods-Base.debug.xcconfig */,
+				ECCE4CD84C6D53B9C45284B4 /* Pods-Base.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6205D6E1EA8715D005BFF45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6205D721EA8715E005BFF45 /* libcrypto.a */,
+				B6205D991EA87650005BFF45 /* OpenSSL.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B624E01C1D6E3B1000D29B22 = {
 			isa = PBXGroup;
 			children = (
+				B628B7DA1EA87112005B8B32 /* External */,
+				B628B6B81EA7D73D005B8B32 /* Certificates */,
+				B628B6B71EA7D728005B8B32 /* Parsing */,
 				B624E0271D6E3B1000D29B22 /* Netopsy */,
+				B628B6EF1EA7D85E005B8B32 /* ParsingTests */,
+				B628B7321EA7D9CC005B8B32 /* Proxying */,
+				B628B73F1EA7D9CC005B8B32 /* ProxyingTests */,
+				B628B75E1EA7DEAA005B8B32 /* Base */,
+				B628B76B1EA7DEAB005B8B32 /* BaseTests */,
 				B624E0261D6E3B1000D29B22 /* Products */,
 				B624E0351D6F63DD00D29B22 /* Frameworks */,
 				7270375D4C148F0044E7EAC7 /* Pods */,
@@ -122,6 +440,14 @@
 			isa = PBXGroup;
 			children = (
 				B624E0251D6E3B1000D29B22 /* Netopsy.app */,
+				B628B6E11EA7D85E005B8B32 /* Parsing.framework */,
+				B628B6E91EA7D85E005B8B32 /* ParsingTests.xctest */,
+				B628B7031EA7D88C005B8B32 /* Certificates.framework */,
+				B628B70B1EA7D88C005B8B32 /* CertificatesTests.xctest */,
+				B628B7311EA7D9CC005B8B32 /* Proxying.framework */,
+				B628B7391EA7D9CC005B8B32 /* ProxyingTests.xctest */,
+				B628B75D1EA7DEAA005B8B32 /* Base.framework */,
+				B628B7651EA7DEAA005B8B32 /* BaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +455,10 @@
 		B624E0271D6E3B1000D29B22 /* Netopsy */ = {
 			isa = PBXGroup;
 			children = (
+				B66A42B01FFB674100EB7003 /* BodyDisplayViewController.xib */,
+				B66A42AD1FFB674000EB7003 /* ImageDisplayViewController.xib */,
+				B66A42B11FFB674100EB7003 /* JSONBodyViewController.xib */,
+				B66A42AF1FFB674000EB7003 /* QueryDisplayViewController.xib */,
 				B63CCAD61DE2C121004FB179 /* DocumentIcon.iconset */,
 				B6646FEE1DC8657D0061E694 /* Netopsy.entitlements */,
 				B624E0281D6E3B1000D29B22 /* AppDelegate.swift */,
@@ -137,32 +467,27 @@
 				B667FA3D1D73F36B00E4E7C9 /* SessionListViewController.swift */,
 				B624E02A1D6E3B1000D29B22 /* Assets.xcassets */,
 				B624E02F1D6E3B1000D29B22 /* Info.plist */,
-				B624E0391D6F6B2900D29B22 /* Utils.h */,
-				B624E03A1D6F6B2900D29B22 /* Utils.m */,
 				B624E0381D6F6B2800D29B22 /* Netopsy-Bridging-Header.h */,
 				B624E03C1D6F700100D29B22 /* DataDeflating.swift */,
-				B688EF5B1D70AD4C005B313B /* RequestParser.swift */,
-				B686C4D11D769ABA00EE9065 /* TraceReader.swift */,
 				B686C4F31D76B3CC00EE9065 /* TraceDocument.swift */,
 				B67F8F691D7D222B001519F0 /* HeaderListViewController.swift */,
 				B67F8F6B1D7D27C2001519F0 /* BodyDisplayViewController.swift */,
 				B6044EA01D7FE2C800DB825F /* SessionInfoViewController.swift */,
+				B6F5F4B81E96A8DD00586EE2 /* netopsy-yammer-mitm-cert.p12 */,
+				B6F5F4BE1E97784200586EE2 /* netopsy-yammer-mitm-cert2.p12 */,
+				B6F5F4B41E9622F500586EE2 /* netopsy-proxy-cert.p12 */,
 				B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */,
 				B672FF6C1D8343AF00A4AA42 /* ImageDisplayViewController.swift */,
 				B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */,
 				B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */,
 				B6FC95F61DAB58BC0029C10C /* QueryDisplayViewController.swift */,
-				B65E22161DB9DB5D002D9FDF /* Logger.swift */,
-				B67AB3281DC1484400AC9D92 /* AppInfo.plist */,
 				B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */,
-				B6E26B141DF877D500457639 /* JSONParser.swift */,
 				B6E26B161DF9D84900457639 /* MessageViewModel.swift */,
 				B6C447F21F670B2D001A1C19 /* CustomTabViewController.swift */,
-				B6C447F81F672ADD001A1C19 /* QueryDisplayViewController.xib */,
-				B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */,
-				B6C447FC1F672BEA001A1C19 /* ImageDisplayViewController.xib */,
-				B6C447FE1F672C31001A1C19 /* JSONBodyViewController.xib */,
 				B621BCAF1E6FDD6400CFDD77 /* CurlCommandWriter.swift */,
+				B665D6651E39DEBC004DA716 /* ProxyConfigurator.h */,
+				B665D6661E39DEBC004DA716 /* ProxyConfigurator.m */,
+				B627DFF11E5041C90026F18A /* TLSBodyViewController.swift */,
 			);
 			path = Netopsy;
 			sourceTree = "<group>";
@@ -170,14 +495,161 @@
 		B624E0351D6F63DD00D29B22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B628B7D21EA7EC21005B8B32 /* openssl.framework */,
+				B6E0F5681E9C5AB700136AE1 /* SecurityInterface.framework */,
 				B6FA06C81DAEFC1000A11DB7 /* QuartzCore.framework */,
 				B624E0361D6F63DD00D29B22 /* libz.tbd */,
 				E9C9D08B8B16C3BD1A3C8B22 /* Pods_Netopsy.framework */,
+				BDFCA15C37145DBFEC3E6463 /* Pods_Certificates.framework */,
+				1E97A419EF79A9A14CEFBA21 /* Pods_Parsing.framework */,
+				76E40988E8E8220608AB2F26 /* Pods_Proxying.framework */,
+				845A00873BB02D0EE484F55A /* Pods_Base.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B628B6B71EA7D728005B8B32 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				B628B7501EA7DC24005B8B32 /* Info.plist */,
+				B6E26B141DF877D500457639 /* JSONParser.swift */,
+				B686C4D11D769ABA00EE9065 /* TraceReader.swift */,
+				B688EF5B1D70AD4C005B313B /* RequestParser.swift */,
+				B6D859C21E56A1ED004977D3 /* ByteReader.swift */,
+				B6D859C41E56A501004977D3 /* TLSParser.swift */,
+				B6D859CA1E56E224004977D3 /* Hello.swift */,
+				B6D859C61E56B252004977D3 /* CipherSuites.swift */,
+				B6D859C81E56DAF8004977D3 /* Extensions.swift */,
+			);
+			path = Parsing;
+			sourceTree = "<group>";
+		};
+		B628B6B81EA7D73D005B8B32 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				B628B7111EA7D88C005B8B32 /* CertificatesTests */,
+				B628B74E1EA7DC1E005B8B32 /* Info.plist */,
+				B6F5F4BA1E972D2800586EE2 /* SSLWrapper.swift */,
+				B65157E31EA00FB1001B5A7D /* CertificateStore.swift */,
+				B628B7521EA7DCB9005B8B32 /* CertificateViewer.h */,
+				B628B7531EA7DCB9005B8B32 /* CertificateViewer.m */,
+				B628B7561EA7DCD5005B8B32 /* Certificates.h */,
+				B6205E6C1EA95901005BFF45 /* CRTOpenSSLErrors.h */,
+				B6205E6D1EA95901005BFF45 /* CRTOpenSSLErrors.m */,
+				B6205E711EA963DB005BFF45 /* module.modulemap */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+		B628B6EF1EA7D85E005B8B32 /* ParsingTests */ = {
+			isa = PBXGroup;
+			children = (
+				B628B6F01EA7D85E005B8B32 /* ParsingTests.swift */,
+				B628B6F21EA7D85E005B8B32 /* Info.plist */,
+			);
+			path = ParsingTests;
+			sourceTree = "<group>";
+		};
+		B628B7111EA7D88C005B8B32 /* CertificatesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B628B7121EA7D88C005B8B32 /* CertificateStoreTests.swift */,
+				B628B7141EA7D88D005B8B32 /* Info.plist */,
+			);
+			path = CertificatesTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		B628B7321EA7D9CC005B8B32 /* Proxying */ = {
+			isa = PBXGroup;
+			children = (
+				B628B75F1EA7DEAA005B8B32 /* Proxying.h */,
+				B60368AF1E1D879100E48D12 /* ProxyListener.swift */,
+				B628B7341EA7D9CC005B8B32 /* Info.plist */,
+			);
+			path = Proxying;
+			sourceTree = "<group>";
+		};
+		B628B73F1EA7D9CC005B8B32 /* ProxyingTests */ = {
+			isa = PBXGroup;
+			children = (
+				B628B7401EA7D9CC005B8B32 /* ProxyingTests.swift */,
+				B628B7421EA7D9CC005B8B32 /* Info.plist */,
+			);
+			path = ProxyingTests;
+			sourceTree = "<group>";
+		};
+		B628B75E1EA7DEAA005B8B32 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B628B7801EA7E2E8005B8B32 /* Base.h */,
+				B65E22161DB9DB5D002D9FDF /* Logger.swift */,
+				B628B7601EA7DEAA005B8B32 /* Info.plist */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B628B76B1EA7DEAB005B8B32 /* BaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				B628B76C1EA7DEAB005B8B32 /* BaseTests.swift */,
+				B628B76E1EA7DEAB005B8B32 /* Info.plist */,
+			);
+			path = BaseTests;
+			sourceTree = "<group>";
+		};
+		B628B7DA1EA87112005B8B32 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				B628B7DB1EA87132005B8B32 /* OpenSSL */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		B628B7DB1EA87132005B8B32 /* OpenSSL */ = {
+			isa = PBXGroup;
+			children = (
+				B628B7D41EA8710A005B8B32 /* openssl.xcodeproj */,
+			);
+			path = OpenSSL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B628B6DE1EA7D85E005B8B32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7001EA7D88C005B8B32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B7571EA7DD33005B8B32 /* Certificates.h in Headers */,
+				B628B7541EA7DCB9005B8B32 /* CertificateViewer.h in Headers */,
+				B6205E6E1EA95901005BFF45 /* CRTOpenSSLErrors.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B72E1EA7D9CC005B8B32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B77D1EA7E230005B8B32 /* Proxying.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B75A1EA7DEAA005B8B32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B7811EA7E2E8005B8B32 /* Base.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		B624E0241D6E3B1000D29B22 /* Netopsy */ = {
@@ -190,15 +662,176 @@
 				B624E0231D6E3B1000D29B22 /* Resources */,
 				BB0265D2BF30F9EF7EDD9777 /* [CP] Embed Pods Frameworks */,
 				7DB621BD8AF81DB8C54F719C /* [CP] Copy Pods Resources */,
+				B628B6C61EA7D82D005B8B32 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B628B6F51EA7D85E005B8B32 /* PBXTargetDependency */,
+				B628B7171EA7D88D005B8B32 /* PBXTargetDependency */,
+				B628B7451EA7D9CC005B8B32 /* PBXTargetDependency */,
+				B628B7711EA7DEAB005B8B32 /* PBXTargetDependency */,
 			);
 			name = Netopsy;
 			productName = Netopsy;
 			productReference = B624E0251D6E3B1000D29B22 /* Netopsy.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B628B6E01EA7D85E005B8B32 /* Parsing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B628B6F81EA7D85E005B8B32 /* Build configuration list for PBXNativeTarget "Parsing" */;
+			buildPhases = (
+				9003B284BB3D780D2B5A8B04 /* [CP] Check Pods Manifest.lock */,
+				B628B6DC1EA7D85E005B8B32 /* Sources */,
+				B628B6DD1EA7D85E005B8B32 /* Frameworks */,
+				B628B6DE1EA7D85E005B8B32 /* Headers */,
+				B628B6DF1EA7D85E005B8B32 /* Resources */,
+				85ED35BEA8BAF8FA26C08C73 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B628B77B1EA7E0E4005B8B32 /* PBXTargetDependency */,
+			);
+			name = Parsing;
+			productName = Parsing;
+			productReference = B628B6E11EA7D85E005B8B32 /* Parsing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B628B6E81EA7D85E005B8B32 /* ParsingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B628B6FB1EA7D85E005B8B32 /* Build configuration list for PBXNativeTarget "ParsingTests" */;
+			buildPhases = (
+				B628B6E51EA7D85E005B8B32 /* Sources */,
+				B628B6E61EA7D85E005B8B32 /* Frameworks */,
+				B628B6E71EA7D85E005B8B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B628B6EC1EA7D85E005B8B32 /* PBXTargetDependency */,
+			);
+			name = ParsingTests;
+			productName = ParsingTests;
+			productReference = B628B6E91EA7D85E005B8B32 /* ParsingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B628B7021EA7D88C005B8B32 /* Certificates */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B628B71A1EA7D88D005B8B32 /* Build configuration list for PBXNativeTarget "Certificates" */;
+			buildPhases = (
+				B628B6FE1EA7D88C005B8B32 /* Sources */,
+				B628B6FF1EA7D88C005B8B32 /* Frameworks */,
+				B628B7001EA7D88C005B8B32 /* Headers */,
+				B628B7011EA7D88C005B8B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6205E571EA89234005BFF45 /* PBXTargetDependency */,
+			);
+			name = Certificates;
+			productName = Certificates;
+			productReference = B628B7031EA7D88C005B8B32 /* Certificates.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B628B70A1EA7D88C005B8B32 /* CertificatesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B628B71D1EA7D88D005B8B32 /* Build configuration list for PBXNativeTarget "CertificatesTests" */;
+			buildPhases = (
+				B628B7071EA7D88C005B8B32 /* Sources */,
+				B628B7081EA7D88C005B8B32 /* Frameworks */,
+				B628B7091EA7D88C005B8B32 /* Resources */,
+			);
+			buildRules = (
+				B6205E6A1EA93607005BFF45 /* PBXBuildRule */,
+			);
+			dependencies = (
+				B628B70E1EA7D88C005B8B32 /* PBXTargetDependency */,
+			);
+			name = CertificatesTests;
+			productName = CertificatesTests;
+			productReference = B628B70B1EA7D88C005B8B32 /* CertificatesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B628B7301EA7D9CC005B8B32 /* Proxying */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B628B7481EA7D9CC005B8B32 /* Build configuration list for PBXNativeTarget "Proxying" */;
+			buildPhases = (
+				4153C5E1905F569CE9253DC7 /* [CP] Check Pods Manifest.lock */,
+				B628B72C1EA7D9CC005B8B32 /* Sources */,
+				B628B72D1EA7D9CC005B8B32 /* Frameworks */,
+				B628B72E1EA7D9CC005B8B32 /* Headers */,
+				B628B72F1EA7D9CC005B8B32 /* Resources */,
+				28372C8CE1E8DF30ABB126CE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6205E5A1EA8938E005BFF45 /* PBXTargetDependency */,
+				B628B77F1EA7E25C005B8B32 /* PBXTargetDependency */,
+			);
+			name = Proxying;
+			productName = Proxying;
+			productReference = B628B7311EA7D9CC005B8B32 /* Proxying.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B628B7381EA7D9CC005B8B32 /* ProxyingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B628B74B1EA7D9CC005B8B32 /* Build configuration list for PBXNativeTarget "ProxyingTests" */;
+			buildPhases = (
+				B628B7351EA7D9CC005B8B32 /* Sources */,
+				B628B7361EA7D9CC005B8B32 /* Frameworks */,
+				B628B7371EA7D9CC005B8B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B628B73C1EA7D9CC005B8B32 /* PBXTargetDependency */,
+			);
+			name = ProxyingTests;
+			productName = ProxyingTests;
+			productReference = B628B7391EA7D9CC005B8B32 /* ProxyingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B628B75C1EA7DEAA005B8B32 /* Base */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B628B7741EA7DEAB005B8B32 /* Build configuration list for PBXNativeTarget "Base" */;
+			buildPhases = (
+				88466010CB80F91A17141D58 /* [CP] Check Pods Manifest.lock */,
+				B628B7581EA7DEAA005B8B32 /* Sources */,
+				B628B7591EA7DEAA005B8B32 /* Frameworks */,
+				B628B75A1EA7DEAA005B8B32 /* Headers */,
+				B628B75B1EA7DEAA005B8B32 /* Resources */,
+				76D481F344226AF57539C6A5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Base;
+			productName = Base;
+			productReference = B628B75D1EA7DEAA005B8B32 /* Base.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B628B7641EA7DEAA005B8B32 /* BaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B628B7771EA7DEAB005B8B32 /* Build configuration list for PBXNativeTarget "BaseTests" */;
+			buildPhases = (
+				B628B7611EA7DEAA005B8B32 /* Sources */,
+				B628B7621EA7DEAA005B8B32 /* Frameworks */,
+				B628B7631EA7DEAA005B8B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B628B7681EA7DEAB005B8B32 /* PBXTargetDependency */,
+				B628B76A1EA7DEAB005B8B32 /* PBXTargetDependency */,
+			);
+			name = BaseTests;
+			productName = BaseTests;
+			productReference = B628B7651EA7DEAA005B8B32 /* BaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -206,7 +839,7 @@
 		B624E01D1D6E3B1000D29B22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Binocracy;
 				TargetAttributes = {
@@ -221,6 +854,50 @@
 							};
 						};
 					};
+					B628B6E01EA7D85E005B8B32 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = SK4Y8NG3YD;
+						ProvisioningStyle = Automatic;
+					};
+					B628B6E81EA7D85E005B8B32 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = SK4Y8NG3YD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B624E0241D6E3B1000D29B22;
+					};
+					B628B7021EA7D88C005B8B32 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = SK4Y8NG3YD;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					B628B70A1EA7D88C005B8B32 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = SK4Y8NG3YD;
+						ProvisioningStyle = Automatic;
+					};
+					B628B7301EA7D9CC005B8B32 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = SK4Y8NG3YD;
+						ProvisioningStyle = Automatic;
+					};
+					B628B7381EA7D9CC005B8B32 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = SK4Y8NG3YD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B624E0241D6E3B1000D29B22;
+					};
+					B628B75C1EA7DEAA005B8B32 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = SK4Y8NG3YD;
+						ProvisioningStyle = Automatic;
+					};
+					B628B7641EA7DEAA005B8B32 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = SK4Y8NG3YD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B624E0241D6E3B1000D29B22;
+					};
 				};
 			};
 			buildConfigurationList = B624E0201D6E3B1000D29B22 /* Build configuration list for PBXProject "Netopsy" */;
@@ -234,32 +911,169 @@
 			mainGroup = B624E01C1D6E3B1000D29B22;
 			productRefGroup = B624E0261D6E3B1000D29B22 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B6205D6E1EA8715D005BFF45 /* Products */;
+					ProjectRef = B628B7D41EA8710A005B8B32 /* openssl.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B624E0241D6E3B1000D29B22 /* Netopsy */,
+				B628B6E01EA7D85E005B8B32 /* Parsing */,
+				B628B6E81EA7D85E005B8B32 /* ParsingTests */,
+				B628B7021EA7D88C005B8B32 /* Certificates */,
+				B628B70A1EA7D88C005B8B32 /* CertificatesTests */,
+				B628B7301EA7D9CC005B8B32 /* Proxying */,
+				B628B7381EA7D9CC005B8B32 /* ProxyingTests */,
+				B628B75C1EA7DEAA005B8B32 /* Base */,
+				B628B7641EA7DEAA005B8B32 /* BaseTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B6205D721EA8715E005BFF45 /* libcrypto.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcrypto.a;
+			remoteRef = B6205D711EA8715E005BFF45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B6205D991EA87650005BFF45 /* OpenSSL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OpenSSL.framework;
+			remoteRef = B6205D981EA87650005BFF45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B624E0231D6E3B1000D29B22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6C447FF1F672C31001A1C19 /* JSONBodyViewController.xib in Resources */,
-				B6C447F91F672ADD001A1C19 /* QueryDisplayViewController.xib in Resources */,
 				B667FA211D72583900E4E7C9 /* Main.storyboard in Resources */,
 				B624E02B1D6E3B1000D29B22 /* Assets.xcassets in Resources */,
-				B67AB3291DC1484400AC9D92 /* AppInfo.plist in Resources */,
 				B63CCAD71DE2C121004FB179 /* DocumentIcon.iconset in Resources */,
-				B6C447FB1F672B9E001A1C19 /* BodyDisplayViewController.xib in Resources */,
-				B6C447FD1F672BEA001A1C19 /* ImageDisplayViewController.xib in Resources */,
+				B66A42B41FFB674100EB7003 /* BodyDisplayViewController.xib in Resources */,
+				B66A42B21FFB674100EB7003 /* ImageDisplayViewController.xib in Resources */,
+				B66A42B51FFB674100EB7003 /* JSONBodyViewController.xib in Resources */,
+				B66A42B31FFB674100EB7003 /* QueryDisplayViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B6DF1EA7D85E005B8B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B6E71EA7D85E005B8B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7011EA7D88C005B8B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7091EA7D88C005B8B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B72F1EA7D9CC005B8B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7371EA7D9CC005B8B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B75B1EA7DEAA005B8B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7631EA7DEAA005B8B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		28372C8CE1E8DF30ABB126CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Proxying/Pods-Proxying-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4153C5E1905F569CE9253DC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Proxying-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76D481F344226AF57539C6A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Base/Pods-Base-resources.sh",
+				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Base/Pods-Base-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7DB621BD8AF81DB8C54F719C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +1090,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85ED35BEA8BAF8FA26C08C73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Parsing/Pods-Parsing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88466010CB80F91A17141D58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Base-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9003B284BB3D780D2B5A8B04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Parsing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9990FBCF2A8A55DB8B4FFE2B /* [CP] Check Pods Manifest.lock */ = {
@@ -306,12 +1171,14 @@
 				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework",
 				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/objective-zip/objective_zip.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HockeySDK.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/HockeySDK.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/objective_zip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -325,7 +1192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E26B151DF877D500457639 /* JSONParser.swift in Sources */,
 				B621BCB01E6FDD6400CFDD77 /* CurlCommandWriter.swift in Sources */,
 				B686C4D41D769EC700EE9065 /* MainViewController.swift in Sources */,
 				B6E26B171DF9D84900457639 /* MessageViewModel.swift in Sources */,
@@ -334,23 +1200,163 @@
 				B67F8F6A1D7D222B001519F0 /* HeaderListViewController.swift in Sources */,
 				B6E26B131DF5E67A00457639 /* JSONBodyViewController.swift in Sources */,
 				B6C447F31F670B2F001A1C19 /* CustomTabViewController.swift in Sources */,
+				B665D6671E39DEBC004DA716 /* ProxyConfigurator.m in Sources */,
 				B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */,
 				B67F8F6D1D7D27C2001519F0 /* BodyDisplayViewController.swift in Sources */,
-				B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */,
 				B624E0291D6E3B1000D29B22 /* AppDelegate.swift in Sources */,
-				B65E22171DB9DB5D002D9FDF /* Logger.swift in Sources */,
 				B686C4F41D76B3CC00EE9065 /* TraceDocument.swift in Sources */,
 				B69FD8691D9AEC5400A7D682 /* MainWindowController.swift in Sources */,
 				B672FF6B1D832C9000A4AA42 /* BodyViewController.swift in Sources */,
 				B624E03D1D6F700100D29B22 /* DataDeflating.swift in Sources */,
 				B6FC95F71DAB58BC0029C10C /* QueryDisplayViewController.swift in Sources */,
 				B672FF6D1D8343AF00A4AA42 /* ImageDisplayViewController.swift in Sources */,
-				B686C4D21D769ABA00EE9065 /* TraceReader.swift in Sources */,
-				B624E03B1D6F6B2900D29B22 /* Utils.m in Sources */,
+				B627DFF21E5041C90026F18A /* TLSBodyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B6DC1EA7D85E005B8B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B7221EA7D8C5005B8B32 /* TraceReader.swift in Sources */,
+				B628B7251EA7D8C5005B8B32 /* TLSParser.swift in Sources */,
+				B628B7231EA7D8C5005B8B32 /* RequestParser.swift in Sources */,
+				B628B7281EA7D8C5005B8B32 /* Extensions.swift in Sources */,
+				B628B7241EA7D8C5005B8B32 /* ByteReader.swift in Sources */,
+				B628B7261EA7D8C5005B8B32 /* Hello.swift in Sources */,
+				B628B7201EA7D8A7005B8B32 /* JSONParser.swift in Sources */,
+				B628B7271EA7D8C5005B8B32 /* CipherSuites.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B6E51EA7D85E005B8B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B6F11EA7D85E005B8B32 /* ParsingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B6FE1EA7D88C005B8B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B7291EA7D9A7005B8B32 /* SSLWrapper.swift in Sources */,
+				B628B7551EA7DCB9005B8B32 /* CertificateViewer.m in Sources */,
+				B628B72A1EA7D9A7005B8B32 /* CertificateStore.swift in Sources */,
+				B6205E6F1EA95901005BFF45 /* CRTOpenSSLErrors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7071EA7D88C005B8B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B7131EA7D88C005B8B32 /* CertificateStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B72C1EA7D9CC005B8B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B77C1EA7E226005B8B32 /* ProxyListener.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7351EA7D9CC005B8B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B7411EA7D9CC005B8B32 /* ProxyingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7581EA7DEAA005B8B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B7821EA7E2FB005B8B32 /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628B7611EA7DEAA005B8B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B628B76D1EA7DEAB005B8B32 /* BaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6205E571EA89234005BFF45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OpenSSL;
+			targetProxy = B6205E561EA89234005BFF45 /* PBXContainerItemProxy */;
+		};
+		B6205E5A1EA8938E005BFF45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B7021EA7D88C005B8B32 /* Certificates */;
+			targetProxy = B6205E591EA8938E005BFF45 /* PBXContainerItemProxy */;
+		};
+		B628B6EC1EA7D85E005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B6E01EA7D85E005B8B32 /* Parsing */;
+			targetProxy = B628B6EB1EA7D85E005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B6F51EA7D85E005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B6E01EA7D85E005B8B32 /* Parsing */;
+			targetProxy = B628B6F41EA7D85E005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B70E1EA7D88C005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B7021EA7D88C005B8B32 /* Certificates */;
+			targetProxy = B628B70D1EA7D88C005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B7171EA7D88D005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B7021EA7D88C005B8B32 /* Certificates */;
+			targetProxy = B628B7161EA7D88D005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B73C1EA7D9CC005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B7301EA7D9CC005B8B32 /* Proxying */;
+			targetProxy = B628B73B1EA7D9CC005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B7451EA7D9CC005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B7301EA7D9CC005B8B32 /* Proxying */;
+			targetProxy = B628B7441EA7D9CC005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B7681EA7DEAB005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B75C1EA7DEAA005B8B32 /* Base */;
+			targetProxy = B628B7671EA7DEAB005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B76A1EA7DEAB005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B624E0241D6E3B1000D29B22 /* Netopsy */;
+			targetProxy = B628B7691EA7DEAB005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B7711EA7DEAB005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B75C1EA7DEAA005B8B32 /* Base */;
+			targetProxy = B628B7701EA7DEAB005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B77B1EA7E0E4005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B75C1EA7DEAA005B8B32 /* Base */;
+			targetProxy = B628B77A1EA7E0E4005B8B32 /* PBXContainerItemProxy */;
+		};
+		B628B77F1EA7E25C005B8B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B628B6E01EA7D85E005B8B32 /* Parsing */;
+			targetProxy = B628B77E1EA7E25C005B8B32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B624E0301D6E3B1000D29B22 /* Debug */ = {
@@ -449,6 +1455,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1BEF6B7BCFB5B14A5EBBF726 /* Pods-Netopsy.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Netopsy/Netopsy.entitlements;
@@ -469,20 +1476,378 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78285773E1FF8D9C13569134 /* Pods-Netopsy.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Netopsy/Netopsy.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SK4Y8NG3YD;
 				INFOPLIST_FILE = Netopsy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Netopsy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e1ccefd9-1d30-4d59-930d-86d5ae7fb8a4";
-				PROVISIONING_PROFILE_SPECIFIER = "Netopsy Production Distribution";
+				PROVISIONING_PROFILE = "45a5e375-caf6-4912-9406-49a9450da466";
+				PROVISIONING_PROFILE_SPECIFIER = "XC OSX: com.binocracy.Netopsy";
 				SWIFT_OBJC_BRIDGING_HEADER = "Netopsy/Netopsy-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		B628B6F91EA7D85E005B8B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA344E4C12514F739794E903 /* Pods-Parsing.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Parsing/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Parsing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B628B6FA1EA7D85E005B8B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B40FC0F145ABF60763D73C6 /* Pods-Parsing.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Parsing/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Parsing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B628B6FC1EA7D85E005B8B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = ParsingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.ParsingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Netopsy.app/Contents/MacOS/Netopsy";
+			};
+			name = Debug;
+		};
+		B628B6FD1EA7D85E005B8B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = ParsingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.ParsingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Netopsy.app/Contents/MacOS/Netopsy";
+			};
+			name = Release;
+		};
+		B628B71B1EA7D88D005B8B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Certificates/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/External/OpenSSL/openssl";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Certificates;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Certificates/Internal/**";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B628B71C1EA7D88D005B8B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Certificates/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/External/OpenSSL/openssl";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Certificates;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Certificates/Internal/**";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B628B71E1EA7D88D005B8B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = CertificatesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.CertificatesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B628B71F1EA7D88D005B8B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = CertificatesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.CertificatesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B628B7491EA7D9CC005B8B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0975D371D9BA2FCA354EB5EB /* Pods-Proxying.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Proxying/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Proxying;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B628B74A1EA7D9CC005B8B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D0F4A3A0C1475440DD5051 /* Pods-Proxying.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Proxying/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Proxying;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B628B74C1EA7D9CC005B8B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = ProxyingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.ProxyingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Netopsy.app/Contents/MacOS/Netopsy";
+			};
+			name = Debug;
+		};
+		B628B74D1EA7D9CC005B8B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = ProxyingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.ProxyingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Netopsy.app/Contents/MacOS/Netopsy";
+			};
+			name = Release;
+		};
+		B628B7751EA7DEAB005B8B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B32EB00E2101B0FB02F01014 /* Pods-Base.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Base/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Base;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B628B7761EA7DEAB005B8B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCE4CD84C6D53B9C45284B4 /* Pods-Base.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Base/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.Base;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B628B7781EA7DEAB005B8B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = BaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.BaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Netopsy.app/Contents/MacOS/Netopsy";
+			};
+			name = Debug;
+		};
+		B628B7791EA7DEAB005B8B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SK4Y8NG3YD;
+				INFOPLIST_FILE = BaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binocracy.BaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Netopsy.app/Contents/MacOS/Netopsy";
 			};
 			name = Release;
 		};
@@ -503,6 +1868,78 @@
 			buildConfigurations = (
 				B624E0331D6E3B1000D29B22 /* Debug */,
 				B624E0341D6E3B1000D29B22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B628B6F81EA7D85E005B8B32 /* Build configuration list for PBXNativeTarget "Parsing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B628B6F91EA7D85E005B8B32 /* Debug */,
+				B628B6FA1EA7D85E005B8B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B628B6FB1EA7D85E005B8B32 /* Build configuration list for PBXNativeTarget "ParsingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B628B6FC1EA7D85E005B8B32 /* Debug */,
+				B628B6FD1EA7D85E005B8B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B628B71A1EA7D88D005B8B32 /* Build configuration list for PBXNativeTarget "Certificates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B628B71B1EA7D88D005B8B32 /* Debug */,
+				B628B71C1EA7D88D005B8B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B628B71D1EA7D88D005B8B32 /* Build configuration list for PBXNativeTarget "CertificatesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B628B71E1EA7D88D005B8B32 /* Debug */,
+				B628B71F1EA7D88D005B8B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B628B7481EA7D9CC005B8B32 /* Build configuration list for PBXNativeTarget "Proxying" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B628B7491EA7D9CC005B8B32 /* Debug */,
+				B628B74A1EA7D9CC005B8B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B628B74B1EA7D9CC005B8B32 /* Build configuration list for PBXNativeTarget "ProxyingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B628B74C1EA7D9CC005B8B32 /* Debug */,
+				B628B74D1EA7D9CC005B8B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B628B7741EA7DEAB005B8B32 /* Build configuration list for PBXNativeTarget "Base" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B628B7751EA7DEAB005B8B32 /* Debug */,
+				B628B7761EA7DEAB005B8B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B628B7771EA7DEAB005B8B32 /* Build configuration list for PBXNativeTarget "BaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B628B7781EA7DEAB005B8B32 /* Debug */,
+				B628B7791EA7DEAB005B8B32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

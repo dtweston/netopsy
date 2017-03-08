@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import AppKit
+import Parsing
 
 enum ContentEncoding {
     case normal
@@ -21,13 +23,18 @@ enum TransferEncoding {
     case unknown
 }
 
-
 class MessageViewModel {
     let message: Message
+    let isTunnel: Bool
 
-    init(message: Message) {
+    init(message: Message, isTunnel: Bool = false) {
         self.message = message
+        self.isTunnel = isTunnel
     }
+
+    lazy var tlsRecords: [TLS.RecordContent] = {
+        return TLSMessageParser().parseRecords(data: self.originalBody)
+    }()
 
     lazy var contentEncoding: ContentEncoding = {
         for header in self.message.headers {
@@ -63,12 +70,9 @@ class MessageViewModel {
     }()
 
     lazy var isJson: Bool = {
-        for header in self.message.headers {
-            if header.0.caseInsensitiveCompare("Content-Type") == .orderedSame {
-                let value = header.1
-                if let rangeOfJson = value.range(of: "json", options: .caseInsensitive, range: value.startIndex..<value.endIndex, locale: nil) {
-                    return !rangeOfJson.isEmpty
-                }
+        if let contentType = self.message.headers["Content-Type"] {
+            if let rangeOfJson = contentType.range(of: "json", options: .caseInsensitive, range: contentType.startIndex..<contentType.endIndex, locale: nil) {
+                return !rangeOfJson.isEmpty
             }
         }
 
@@ -76,19 +80,20 @@ class MessageViewModel {
     }()
 
     lazy var isImage: Bool = {
-        for header in self.message.headers {
-            if header.0.caseInsensitiveCompare("Content-Type") == .orderedSame {
-                let value = header.1
-                if let rangeOfImage = value.range(of: "image/", options: .caseInsensitive, range: value.startIndex..<value.endIndex, locale: nil) {
+        if let contentType = self.message.headers["Content-Type"] {
+            if let rangeOfImage = contentType.range(of: "image/", options: .caseInsensitive, range: contentType.startIndex..<contentType.endIndex, locale: nil) {
 
-                    if rangeOfImage.lowerBound == value.startIndex {
-                        return true
-                    }
+                if rangeOfImage.lowerBound == contentType.startIndex {
+                    return true
                 }
             }
         }
 
         return false
+    }()
+
+    lazy var originalBody: Data = {
+        return self.message.originalBody
     }()
 
     lazy var unchunkedData: Data? = {
