@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -28,6 +28,46 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B628B6E81EA7D85E005B8B32"
+               BuildableName = "ParsingTests.xctest"
+               BlueprintName = "ParsingTests"
+               ReferencedContainer = "container:Netopsy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B628B70A1EA7D88C005B8B32"
+               BuildableName = "CertificatesTests.xctest"
+               BlueprintName = "CertificatesTests"
+               ReferencedContainer = "container:Netopsy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B628B7381EA7D9CC005B8B32"
+               BuildableName = "ProxyingTests.xctest"
+               BlueprintName = "ProxyingTests"
+               ReferencedContainer = "container:Netopsy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B628B7641EA7DEAA005B8B32"
+               BuildableName = "BaseTests.xctest"
+               BlueprintName = "BaseTests"
+               ReferencedContainer = "container:Netopsy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

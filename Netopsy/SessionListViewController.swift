@@ -7,9 +7,16 @@
 //
 
 import Cocoa
+import Parsing
 
 protocol SessionListViewControllerDelegate: class {
     func didSelect(session: SessionIndex)
+}
+
+extension SessionIndex {
+    public var isTunnel: Bool {
+        return request?.isTunnel() ?? false
+    }
 }
 
 extension RequestMessageProtocol {
@@ -18,7 +25,7 @@ extension RequestMessageProtocol {
     }
 }
 
-class SessionListViewController: NSViewController {
+class SessionListViewController: NSViewController, RecordingTraceDelegate {
 
     @IBOutlet var tableView: NSTableView!
     @IBOutlet var scrollView: NSScrollView!
@@ -27,7 +34,16 @@ class SessionListViewController: NSViewController {
 
     let fileManager = FileManager.default
 
-    var sessions: [SessionIndex]? {
+    var trace: ITrace? {
+        didSet {
+            if let recTrace = trace as? RecordingTrace {
+                recTrace.delegate = self
+            }
+            sessions = trace?.sessions
+        }
+    }
+
+    var sessions: ArrayWrapper<SessionIndex>? {
         didSet {
             tableView.reloadData()
         }
@@ -36,9 +52,6 @@ class SessionListViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
-
         scrollView.contentView.scroll(to: NSMakePoint(0, -23))
     }
 
@@ -46,6 +59,14 @@ class SessionListViewController: NSViewController {
         didSet {
             tableView.reloadData()
         }
+    }
+
+    func traceDidAddSession(_ trace: RecordingTrace) {
+        tableView.insertRows(at: [tableView.numberOfRows], withAnimation: .effectFade)
+    }
+
+    func traceDidUpdateSession(_ trace: RecordingTrace, at index: Int) {
+        tableView.reloadData(forRowIndexes: IndexSet([index]), columnIndexes: IndexSet(0..<tableView.numberOfColumns))
     }
 }
 
@@ -73,7 +94,7 @@ extension SessionListViewController: NSTableViewDelegate {
         var cellIdentifier = NSUserInterfaceItemIdentifier("")
         var text = ""
 
-        let textColor = file.request.isTunnel() ? NSColor.gray : NSColor.black
+        let textColor = file.isTunnel ? NSColor.gray : NSColor.black
 
         if tableColumn == tableView.tableColumns[0] {
             cellIdentifier = NSUserInterfaceItemIdentifier("SessionNumberCellID")
@@ -95,7 +116,12 @@ extension SessionListViewController: NSTableViewDelegate {
         else if tableColumn == tableView.tableColumns[3] {
             cellIdentifier = NSUserInterfaceItemIdentifier("PathCellID")
             if file.request.isTunnel() {
-                text = file.request?.url.absoluteString ?? ""
+                if let url = file.request?.url {
+                    text = "\(url.host ?? ""):\(url.port ?? 80)"
+                }
+                else {
+                    text = file.request?.url.path ?? ""
+                }
             }
             else {
                 text = file.request?.url.path ?? ""

@@ -7,19 +7,17 @@
 //
 
 import Foundation
+import Parsing
 
 class CurlCommandWriter {
     func curlHeaders(for request: RequestMessage) -> [String] {
 
         var headerList = [String]()
-        for (key, value) in request.headers {
-            if key.caseInsensitiveCompare("Host") != .orderedSame {
-                let blah = "\(key):\(value)"
-                if !blah.contains("'") {
-                    headerList.append("-H '\(blah)'")
-                } else {
-                    headerList.append("-H \"\(key):\(value)\"")
-                }
+        if let hostValue = request.headers["Host"] {
+            if !hostValue.contains("'") {
+                headerList.append("-H 'Host:\(hostValue)'")
+            } else {
+                headerList.append("-H \"Host:\(hostValue)\"")
             }
         }
 

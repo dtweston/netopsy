@@ -64,7 +64,7 @@ public struct JSONParser {
     var parserDepth = 0
     var maxParserDepth : Int
 
-    init(data:Data, maxParserDepth : Int = 512) {
+    public init(data:Data, maxParserDepth : Int = 512) {
         self.maxParserDepth = maxParserDepth
         self.data = data
         self.dataLength = data.count
@@ -329,7 +329,7 @@ public struct JSONParser {
         return .object(d)
     }
 
-    mutating func parse() throws -> JSONValue? {
+    public mutating func parse() throws -> JSONValue? {
         // skip BOM if present
         if readAndMove(.utf8BOMByte1) {
             guard readAndMove(.utf8BOMByte2) else { return nil }

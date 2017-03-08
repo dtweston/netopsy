@@ -7,10 +7,33 @@
 //
 
 import Cocoa
+import Base
+import Certificates
+import Parsing
+import Proxying
 
 class TraceDocument: NSDocument {
 
-    var trace: Trace? = nil
+    var trace: ITrace?
+    var proxyListener: ProxyListener?
+
+    override init() {
+        super.init()
+    }
+
+    convenience init(type typeName: String, certificateStore: CertificateStore) throws {
+        self.init()
+
+        let trace = RecordingTrace()
+        proxyListener = ProxyListener(trace: trace, certificateStore: certificateStore)
+        self.trace = trace
+
+        if let proxy = proxyListener {
+            fileURL = proxy.traceWriter.basePath
+
+            try! proxy.start()
+        }
+    }
 
     override class func canConcurrentlyReadDocuments(ofType: String) -> Bool {
         return true
@@ -34,7 +57,7 @@ class TraceDocument: NSDocument {
             addWindowController(windowController)
 
             if let mainVC = windowController.contentViewController as? MainViewController {
-                mainVC.sessionListVC?.sessions = trace?.sessions
+                mainVC.trace = trace
             }
         }
     }
@@ -46,20 +69,36 @@ class TraceDocument: NSDocument {
     }
 
     override func read(from url: URL, ofType typeName: String) throws {
-
         guard url.isFileURL else {
             throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
         }
 
         LogI("Starting to read '\(url)'")
         let reader = TraceReader()
-        do {
-            if let trace = try reader.zippedTrace(at: url.path) {
-                self.trace = trace
+
+        let fm = FileManager.default
+        var isDir = ObjCBool(false)
+        if fm.fileExists(atPath: url.path, isDirectory: &isDir) {
+            if isDir.boolValue {
+                do {
+                    if let trace = try reader.folderTrace(at: url) {
+                        self.trace = trace
+                    }
+                }
+                catch let ex {
+                    LogParseE("Unable to open folder '\(url)' Error: \(ex)")
+                }
             }
-        }
-        catch let ex {
-            LogParseE("Unable to open document '\(url)' Error: \(ex)")
+            else {
+                do {
+                    if let trace = try reader.zippedTrace(at: url.path) {
+                        self.trace = trace
+                    }
+                }
+                catch let ex {
+                    LogParseE("Unable to open document '\(url)' Error: \(ex)")
+                }
+            }
         }
     }
 

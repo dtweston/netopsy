@@ -278,6 +278,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="aty-di-Ryb" id="lOC-A0-Bhg"/>
+                                                <outlet property="delegate" destination="aty-di-Ryb" id="7c0-4M-Suk"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -381,13 +385,12 @@
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="R2b-1T-24c">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="315"/>
                                 <connections>
-                                    <segue destination="b8S-GK-6lt" kind="embed" id="e7h-EF-jJQ"/>
+                                    <segue destination="b8S-GK-6lt" kind="embed" id="Xv9-KD-bNF"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hPQ-FZ-Ijg" secondAttribute="trailing" id="3Uu-YY-g4m"/>
-                            <constraint firstAttribute="trailing" secondItem="hPQ-FZ-Ijg" secondAttribute="trailing" id="4Sq-uy-Mlb"/>
                             <constraint firstItem="R2b-1T-24c" firstAttribute="leading" secondItem="f1A-fW-TaM" secondAttribute="leading" id="DKd-E3-r4w"/>
                             <constraint firstItem="hPQ-FZ-Ijg" firstAttribute="leading" secondItem="f1A-fW-TaM" secondAttribute="leading" id="HNt-EL-p4x"/>
                             <constraint firstItem="hPQ-FZ-Ijg" firstAttribute="top" secondItem="f1A-fW-TaM" secondAttribute="top" id="Oxh-jR-3SP"/>
@@ -397,6 +400,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="R2b-1T-24c" id="aJK-7a-xxW"/>
                         <outlet property="headerView" destination="hPQ-FZ-Ijg" id="h0V-gl-uOC"/>
                         <outlet property="methodLabel" destination="JDk-1P-LdE" id="MWK-L2-lmD"/>
                         <outlet property="statusLabel" destination="Smt-g9-Xyp" id="GVH-1f-Bxq"/>
@@ -417,7 +421,7 @@
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="33E-2T-Ubs">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
                         <connections>
@@ -650,6 +654,11 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="erL-sR-Wt8">
                                     <items>
+                                        <menuItem title="New Trace..." keyEquivalent="n" id="e4c-dw-FvJ" userLabel="New Trace...">
+                                            <connections>
+                                                <action selector="newDocument:" target="QYa-0n-3ou" id="PrA-Uh-uVV"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Open…" keyEquivalent="o" id="SL4-mH-puc">
                                             <connections>
                                                 <action selector="openDocument:" target="QYa-0n-3ou" id="AtY-eg-0nm"/>
@@ -779,12 +788,7 @@
                     </connections>
                 </application>
                 <customObject id="QYa-0n-3ou" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="Xfd-Xd-WfQ" customClass="TraceReader" customModule="Netopsy" customModuleProvider="target"/>
-                <customObject id="5fK-Mw-9lb" customClass="AppDelegate" customModule="Netopsy" customModuleProvider="target">
-                    <connections>
-                        <outlet property="traceReader" destination="Xfd-Xd-WfQ" id="fly-eP-ofM"/>
-                    </connections>
-                </customObject>
+                <customObject id="5fK-Mw-9lb" customClass="AppDelegate" customModule="Netopsy" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="31" y="-290"/>
         </scene>

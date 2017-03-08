@@ -1,0 +1,5 @@
+module CertificatesInternal {
+    header "../CRTOpenSSLErrors.h"
+
+    export *
+}

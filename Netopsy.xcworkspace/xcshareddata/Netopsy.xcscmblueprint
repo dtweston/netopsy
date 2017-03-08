@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4EC2CF585CA4131B53A4A8815F86A71C40C438DC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4EC2CF585CA4131B53A4A8815F86A71C40C438DC" : 9223372036854775807,
+    "F17E1E91C07915BEAF282A48F9104EBF122C26E7" : 9223372036854775807,
+    "13B02CF24E30B1C3AA76203FDA349A20C68E312F" : 9223372036854775807,
+    "55A7FB660E25DAD7EFF279C9F437500B47348AC7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0EAB305C-24E7-4155-900B-FC073EB894FD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4EC2CF585CA4131B53A4A8815F86A71C40C438DC" : "Netopsy\/",
+    "F17E1E91C07915BEAF282A48F9104EBF122C26E7" : "..\/Objective-Zip",
+    "13B02CF24E30B1C3AA76203FDA349A20C68E312F" : "Netopsy\/External\/OpenSSL\/",
+    "55A7FB660E25DAD7EFF279C9F437500B47348AC7" : "Netopsy\/External\/OpenSSL\/openssl\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Netopsy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Netopsy.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:krzyzanowskim\/OpenSSL.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "13B02CF24E30B1C3AA76203FDA349A20C68E312F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dtweston\/Netopsy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4EC2CF585CA4131B53A4A8815F86A71C40C438DC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:openssl\/openssl.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "55A7FB660E25DAD7EFF279C9F437500B47348AC7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dtweston\/Objective-Zip.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F17E1E91C07915BEAF282A48F9104EBF122C26E7"
+    }
+  ]
+}

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Parsing
 
 class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
 
