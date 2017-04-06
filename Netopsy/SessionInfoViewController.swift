@@ -86,4 +86,16 @@ class SessionInfoViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
     }
+
+    @IBAction func exportToCurl(_ sender: AnyObject) {
+        if let sess = session,
+            let rq = sess.request,
+            let req = traceReader.request(from: sess.trace, at: rq.path) {
+
+            let curlCommand = CurlCommandWriter().curlCommand(for: req)
+            let pboard = NSPasteboard.general()
+            pboard.clearContents()
+            pboard.writeObjects([curlCommand as NSString])
+        }
+    }
 }

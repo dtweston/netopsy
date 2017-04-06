@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB373756BE237F8D9B8DB21D /* Pods_Netopsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C9D08B8B16C3BD1A3C8B22 /* Pods_Netopsy.framework */; };
 		B6044EA21D7FE2C800DB825F /* SessionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6044EA01D7FE2C800DB825F /* SessionInfoViewController.swift */; };
+		B621BCB01E6FDD6400CFDD77 /* CurlCommandWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621BCAF1E6FDD6400CFDD77 /* CurlCommandWriter.swift */; };
 		B624E0291D6E3B1000D29B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624E0281D6E3B1000D29B22 /* AppDelegate.swift */; };
 		B624E02B1D6E3B1000D29B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B624E02A1D6E3B1000D29B22 /* Assets.xcassets */; };
 		B624E0371D6F63DD00D29B22 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B624E0361D6F63DD00D29B22 /* libz.tbd */; };
@@ -45,6 +46,7 @@
 		1BEF6B7BCFB5B14A5EBBF726 /* Pods-Netopsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netopsy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy.debug.xcconfig"; sourceTree = "<group>"; };
 		78285773E1FF8D9C13569134 /* Pods-Netopsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netopsy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Netopsy/Pods-Netopsy.release.xcconfig"; sourceTree = "<group>"; };
 		B6044EA01D7FE2C800DB825F /* SessionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInfoViewController.swift; sourceTree = "<group>"; };
+		B621BCAF1E6FDD6400CFDD77 /* CurlCommandWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurlCommandWriter.swift; sourceTree = "<group>"; };
 		B624E0251D6E3B1000D29B22 /* Netopsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netopsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B624E0281D6E3B1000D29B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B624E02A1D6E3B1000D29B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */,
 				B6C447FC1F672BEA001A1C19 /* ImageDisplayViewController.xib */,
 				B6C447FE1F672C31001A1C19 /* JSONBodyViewController.xib */,
+				B621BCAF1E6FDD6400CFDD77 /* CurlCommandWriter.swift */,
 			);
 			path = Netopsy;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E26B151DF877D500457639 /* JSONParser.swift in Sources */,
+				B621BCB01E6FDD6400CFDD77 /* CurlCommandWriter.swift in Sources */,
 				B686C4D41D769EC700EE9065 /* MainViewController.swift in Sources */,
 				B6E26B171DF9D84900457639 /* MessageViewModel.swift in Sources */,
 				B6044EA21D7FE2C800DB825F /* SessionInfoViewController.swift in Sources */,
