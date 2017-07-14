@@ -55,12 +55,12 @@ class Trace {
 
     class func zippedTrace(at path: String, traceReader: TraceReader) throws -> Trace? {
         do {
-            let zipFile = OZZipFile(fileName: path, mode: .unzip)
+            let zipFile = try OZZipFile(fileName: path, mode: .unzip)
             let trace = Trace(zipFile: zipFile)
             let regex = try NSRegularExpression(pattern: "^raw/(\\d+)_(\\w).(\\w+)$", options: [])
 
             do {
-                try zipFile.goToFirstFileInZipWithError()
+                try zipFile.goToFirstFileInZip()
             }
             catch let ex {
                 LogEvent("no-sessions")
@@ -71,7 +71,7 @@ class Trace {
             var done = false
             while !done {
                 do {
-                    let file = try zipFile.getCurrentFileInZipInfoWithError()
+                    let file = try zipFile.getCurrentFileInZipInfo()
                     let nsPath = file.name as NSString
                     if let match = regex.firstMatch(in: file.name, options: [], range: NSMakeRange(0, nsPath.length)) {
                         let numStr = nsPath.substring(with: match.rangeAt(1))
@@ -107,7 +107,7 @@ class Trace {
                     }
 
                     do {
-                        try zipFile.goToNextFileInZipWithError()
+                        try zipFile.goToNextFileInZip()
                     }
                     catch {
                         done = true
@@ -144,13 +144,28 @@ class Trace {
     }
 
     func currentFileData(portion: Bool) -> Data? {
-        let stream = zipFile.readCurrentFileInZip()
-        defer { stream.finishedReading() }
+        var optStream: OZZipReadStream?
+        do {
+            optStream = try zipFile.readCurrentFileInZip()
+        }
+        catch {
+            return nil
+        }
+
+        guard let stream = optStream else { return nil }
+
+        defer {
+            do {
+                try stream.finishedReading()
+            }
+            catch {
+            }
+        }
         var data = Data()
         repeat {
             if let buffer = NSMutableData(length: 1000) {
                 do {
-                    let ret = try stream.readData(withBuffer: buffer, error: ())
+                    let ret = try stream.readData(withBuffer: buffer)
                     if ret <= 0 {
                         break
                     }
@@ -174,8 +189,12 @@ class Trace {
     }
 
     func fileData(at filePath: String, portion: Bool = false) -> Data? {
-        if zipFile.locateFile(inZip: filePath) {
-            return currentFileData(portion: portion)
+        do {
+            if try zipFile.locateFile(filePath) == OZLocateFileResultFound {
+                return currentFileData(portion: portion)
+            }
+        }
+        catch {
         }
 
         return nil

@@ -4,12 +4,22 @@ PODS:
 
 DEPENDENCIES:
   - HockeySDK-Mac
-  - objective-zip
+  - objective-zip (from `https://github.com/dtweston/Objective-Zip.git`, commit `b423fd2`)
+
+EXTERNAL SOURCES:
+  objective-zip:
+    :commit: b423fd2
+    :git: https://github.com/dtweston/Objective-Zip.git
+
+CHECKOUT OPTIONS:
+  objective-zip:
+    :commit: b423fd2
+    :git: https://github.com/dtweston/Objective-Zip.git
 
 SPEC CHECKSUMS:
   HockeySDK-Mac: c849a264e4f5f43520f7eec7d3f8b921cfc6e63b
   objective-zip: 2f4eba2ed4a06ed74c7e6e4e7b80e6cacf212217
 
-PODFILE CHECKSUM: d8f5a456e1dc57060cf3b254415fff3ae01d9f5f
+PODFILE CHECKSUM: 9be89d84ffd36b20eacaf216ff8c5cd79bab79b9
 
 COCOAPODS: 1.2.0
