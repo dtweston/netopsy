@@ -67,17 +67,17 @@ class SessionInfoViewController: NSViewController {
                 if let reqHeadersVC = reqVC.splitViewItems[0].viewController as? HeaderListViewController {
                     requestHeadersVC = reqHeadersVC
                 }
-                if let reqBodyVC = reqVC.splitViewItems[1].viewController as? BodyViewController {
-                    requestBodyVC = reqBodyVC
-                }
+                let bodyVC = BodyViewController()
+                reqVC.addSplitViewItem(NSSplitViewItem(viewController: bodyVC))
+                requestBodyVC = bodyVC
             }
             if let respVC = tabController.tabViewItems[1].viewController as? NSSplitViewController {
                 if let respHeadersVC = respVC.splitViewItems[0].viewController as? HeaderListViewController {
                     responseHeadersVC = respHeadersVC
                 }
-                if let respBodyVC = respVC.splitViewItems[1].viewController as? BodyViewController {
-                    responseBodyVC = respBodyVC
-                }
+                let bodyVC = BodyViewController()
+                respVC.addSplitViewItem(NSSplitViewItem(viewController: bodyVC))
+                responseBodyVC = bodyVC
             }
         }
     }

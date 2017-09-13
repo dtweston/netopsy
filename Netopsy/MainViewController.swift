@@ -26,4 +26,6 @@ class MainViewController: NSSplitViewController, SessionListViewControllerDelega
             sessionInfoVC.session = session
         }
     }
+
+    
 }

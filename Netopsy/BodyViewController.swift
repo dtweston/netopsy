@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class BodyViewController: NSTabViewController {
+class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
 
     var rawBody: BodyDisplayViewController!
     var queryList: QueryDisplayViewController!
@@ -17,25 +17,67 @@ class BodyViewController: NSTabViewController {
     var imageBody: ImageDisplayViewController!
     var jsonBody: JSONBodyViewController!
 
+    var tabViewController: CustomTabViewController?
+
     var lastSelectedBody: NSViewController? = nil
     var messageViewModel: MessageViewModel? = nil
 
+    override func loadView() {
+        view = NSView()
+        view.autoresizingMask = [.viewHeightSizable, .viewWidthSizable]
+//        view.translatesAutoresizingMaskIntoConstraints = false
+
+        let rawBody = BodyDisplayViewController()
+        let queryList = QueryDisplayViewController()
+        let unchunkedBody = BodyDisplayViewController()
+        let inflatedBody = BodyDisplayViewController()
+        let imageBody = ImageDisplayViewController()
+        let jsonBody = JSONBodyViewController()
+
+        let tabViewController = CustomTabViewController()
+        tabViewController.delegate = self
+        tabViewController.tabViewItems = [
+            CustomTabViewItem(viewController: rawBody, title: "Raw"),
+            CustomTabViewItem(viewController: queryList, title: "Query"),
+            CustomTabViewItem(viewController: unchunkedBody, title: "Unchunked"),
+            CustomTabViewItem(viewController: inflatedBody, title: "Inflated"),
+            CustomTabViewItem(viewController: imageBody, title: "Image"),
+            CustomTabViewItem(viewController: jsonBody, title: "JSON"),
+        ]
+
+        self.tabViewController = tabViewController
+
+        addChildViewController(tabViewController)
+        view.addSubview(tabViewController.view)
+
+        self.rawBody = rawBody
+        self.queryList = queryList
+        self.unchunkedBody = unchunkedBody
+        self.inflatedBody = inflatedBody
+        self.imageBody = imageBody
+        self.jsonBody = jsonBody
+
+        let views = ["child": tabViewController.view]
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[child]|", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[child]|", options: [], metrics: nil, views: views))
+    }
+
     var message: Message? {
         didSet {
-            findChildren()
-
-            tabViewItems.removeAll()
-
+            guard let tabViewController = tabViewController else {
+                print("Error! No TabViewController!")
+                return
+            }
             if let msg = message {
                 let vm = MessageViewModel(message: msg)
                 if let body = message?.originalBody {
-                    if body.count > 0 {
-                        rawBody.bodyContent = {
-                            return String(data: body, encoding: .ascii)
-                        }
+                    rawBody.bodyContent = {
+                        return String(data: body, encoding: .ascii)
                     }
-
-                    addTabViewItem(NSTabViewItem(viewController: rawBody))
+                    tabViewController.enableItem(at: 0)
+                }
+                else {
+                    tabViewController.disableItem(at: 0)
                 }
 
                 if let req = message as? RequestMessage {
@@ -43,8 +85,14 @@ class BodyViewController: NSTabViewController {
                         let queryItems = components.queryItems, queryItems.count > 0 {
 
                         queryList.queryItems = queryItems
-                        addTabViewItem(NSTabViewItem(viewController: queryList))
+                        tabViewController.enableItem(at: 1)
                     }
+                    else {
+                        tabViewController.disableItem(at: 1)
+                    }
+                }
+                else {
+                    tabViewController.disableItem(at: 1)
                 }
 
                 if vm.transferEncoding == .Chunked {
@@ -54,8 +102,10 @@ class BodyViewController: NSTabViewController {
                         }
                         return ""
                     }
-
-                    addTabViewItem(NSTabViewItem(viewController: unchunkedBody))
+                    tabViewController.enableItem(at: 2)
+                }
+                else {
+                    tabViewController.disableItem(at: 2)
                 }
 
                 if vm.contentEncoding == .Gzip || vm.contentEncoding == .Deflate {
@@ -66,8 +116,10 @@ class BodyViewController: NSTabViewController {
 
                         return "Missing"
                     }
-
-                    addTabViewItem(NSTabViewItem(viewController: inflatedBody))
+                    tabViewController.enableItem(at: 3)
+                }
+                else {
+                    tabViewController.disableItem(at: 3)
                 }
 
                 if vm.isImage {
@@ -78,8 +130,10 @@ class BodyViewController: NSTabViewController {
 
                         return NSImage()
                     }
-
-                    addTabViewItem(NSTabViewItem(viewController: imageBody))
+                    tabViewController.enableItem(at: 4)
+                }
+                else {
+                    tabViewController.disableItem(at: 4)
                 }
 
                 if vm.isJson {
@@ -96,58 +150,30 @@ class BodyViewController: NSTabViewController {
                         return nil
                     }
 
-                    addTabViewItem(NSTabViewItem(viewController: jsonBody))
+                    tabViewController.enableItem(at: 5)
+                }
+                else {
+                    tabViewController.disableItem(at: 5)
                 }
             }
 
             if let last = lastSelectedBody,
-                let item = tabViewItem(for: last),
-                let lastIndex = tabViewItems.index(of: item) {
+                let item = tabViewController.tabViewItem(for: last),
+                item.isEnabled {
 
-                selectedTabViewItemIndex = lastIndex
+                tabViewController.selectedTabViewItem = item
             }
-            else if tabViewItems.count > 0 {
-                selectedTabViewItemIndex = tabViewItems.count - 1
+            else if let mostDetailed = tabViewController.enabledItems.last {
+                tabViewController.selectedTabViewItem = mostDetailed
             }
         }
     }
 
-    func findChildren() {
-        if rawBody == nil {
-            rawBody = tabViewItems[0].viewController as? BodyDisplayViewController
-            rawBody.title = "Raw"
-        }
-        if unchunkedBody == nil {
-            unchunkedBody = tabViewItems[1].viewController as? BodyDisplayViewController
-            unchunkedBody.title = "Unchunked"
-        }
-        if inflatedBody == nil {
-            inflatedBody = tabViewItems[2].viewController as? BodyDisplayViewController
-            inflatedBody.title = "Inflated"
-        }
-        if imageBody == nil {
-            imageBody = tabViewItems[3].viewController as? ImageDisplayViewController
-            imageBody.title = "Image"
-        }
-        if queryList == nil {
-            queryList = tabViewItems[4].viewController as? QueryDisplayViewController
-            queryList.title = "Query"
-        }
-        if jsonBody == nil {
-            jsonBody = tabViewItems[5].viewController as? JSONBodyViewController
-            jsonBody.title = "JSON"
-        }
-    }
+    // MARK: - CustomTabViewControllerDelegate methods
 
-    override func tabView(_ tabView: NSTabView, didSelect tabViewItem: NSTabViewItem?) {
+    func tabViewController(_ tabViewController: CustomTabViewController, didSelect tabViewItem: CustomTabViewItem?) {
         if let last = tabViewItem?.viewController {
             lastSelectedBody = last
         }
-        super.tabView(tabView, didSelect: tabViewItem)
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
 }

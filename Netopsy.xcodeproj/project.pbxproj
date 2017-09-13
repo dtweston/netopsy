@@ -29,6 +29,11 @@
 		B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688EF5B1D70AD4C005B313B /* RequestParser.swift */; };
 		B69FD8691D9AEC5400A7D682 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */; };
 		B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */; };
+		B6C447F31F670B2F001A1C19 /* CustomTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C447F21F670B2D001A1C19 /* CustomTabViewController.swift */; };
+		B6C447F91F672ADD001A1C19 /* QueryDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447F81F672ADD001A1C19 /* QueryDisplayViewController.xib */; };
+		B6C447FB1F672B9E001A1C19 /* BodyDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */; };
+		B6C447FD1F672BEA001A1C19 /* ImageDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447FC1F672BEA001A1C19 /* ImageDisplayViewController.xib */; };
+		B6C447FF1F672C31001A1C19 /* JSONBodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447FE1F672C31001A1C19 /* JSONBodyViewController.xib */; };
 		B6E26B131DF5E67A00457639 /* JSONBodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */; };
 		B6E26B151DF877D500457639 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B141DF877D500457639 /* JSONParser.swift */; };
 		B6E26B171DF9D84900457639 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E26B161DF9D84900457639 /* MessageViewModel.swift */; };
@@ -65,6 +70,11 @@
 		B688EF5B1D70AD4C005B313B /* RequestParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParser.swift; sourceTree = "<group>"; };
 		B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceDocumentController.swift; sourceTree = "<group>"; };
+		B6C447F21F670B2D001A1C19 /* CustomTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewController.swift; sourceTree = "<group>"; };
+		B6C447F81F672ADD001A1C19 /* QueryDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryDisplayViewController.xib; sourceTree = "<group>"; };
+		B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyDisplayViewController.xib; sourceTree = "<group>"; };
+		B6C447FC1F672BEA001A1C19 /* ImageDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDisplayViewController.xib; sourceTree = "<group>"; };
+		B6C447FE1F672C31001A1C19 /* JSONBodyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSONBodyViewController.xib; sourceTree = "<group>"; };
 		B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONBodyViewController.swift; sourceTree = "<group>"; };
 		B6E26B141DF877D500457639 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		B6E26B161DF9D84900457639 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
@@ -145,6 +155,11 @@
 				B6E26B121DF5E67A00457639 /* JSONBodyViewController.swift */,
 				B6E26B141DF877D500457639 /* JSONParser.swift */,
 				B6E26B161DF9D84900457639 /* MessageViewModel.swift */,
+				B6C447F21F670B2D001A1C19 /* CustomTabViewController.swift */,
+				B6C447F81F672ADD001A1C19 /* QueryDisplayViewController.xib */,
+				B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */,
+				B6C447FC1F672BEA001A1C19 /* ImageDisplayViewController.xib */,
+				B6C447FE1F672C31001A1C19 /* JSONBodyViewController.xib */,
 			);
 			path = Netopsy;
 			sourceTree = "<group>";
@@ -228,10 +243,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C447FF1F672C31001A1C19 /* JSONBodyViewController.xib in Resources */,
+				B6C447F91F672ADD001A1C19 /* QueryDisplayViewController.xib in Resources */,
 				B667FA211D72583900E4E7C9 /* Main.storyboard in Resources */,
 				B624E02B1D6E3B1000D29B22 /* Assets.xcassets in Resources */,
 				B67AB3291DC1484400AC9D92 /* AppInfo.plist in Resources */,
 				B63CCAD71DE2C121004FB179 /* DocumentIcon.iconset in Resources */,
+				B6C447FB1F672B9E001A1C19 /* BodyDisplayViewController.xib in Resources */,
+				B6C447FD1F672BEA001A1C19 /* ImageDisplayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +329,7 @@
 				B667FA3E1D73F36B00E4E7C9 /* SessionListViewController.swift in Sources */,
 				B67F8F6A1D7D222B001519F0 /* HeaderListViewController.swift in Sources */,
 				B6E26B131DF5E67A00457639 /* JSONBodyViewController.swift in Sources */,
+				B6C447F31F670B2F001A1C19 /* CustomTabViewController.swift in Sources */,
 				B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */,
 				B67F8F6D1D7D27C2001519F0 /* BodyDisplayViewController.swift in Sources */,
 				B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */,
