@@ -44,11 +44,15 @@ public class CustomTabViewController: NSViewController {
         set {
             guard let viewItem = newValue else {
                 tabView?.selectedSegment = -1
+                for subview in containerView?.subviews ?? [] {
+                    subview.removeFromSuperview()
+                }
                 return
             }
             precondition(enabledItems.contains(viewItem))
             tabView?.selectedSegment = enabledItems.index(of: viewItem)!
             select(item: viewItem)
+            lastItem = viewItem
         }
         get {
             let index = tabView?.selectedSegment ?? -1
@@ -85,7 +89,7 @@ public class CustomTabViewController: NSViewController {
         self.containerView = container
 
         let views = ["selector": tabView, "content": container]
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[selector]-[content]|", options: .alignAllCenterX, metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[selector][content]|", options: .alignAllCenterX, metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[content]|", options: [], metrics: nil, views: views))
 
         updateTabs()
@@ -100,16 +104,15 @@ public class CustomTabViewController: NSViewController {
             cvc.removeFromParentViewController()
         }
 
+        for item in tabViewItems {
+            addChildViewController(item.viewController)
+        }
+        
         tabView?.segmentCount = enabledItems.count
 
         for i in 0 ..< enabledItems.count {
             let item = enabledItems[i]
             tabView?.setLabel(item.title ?? "Tab \(i+1)", forSegment: i)
-            addChildViewController(item.viewController)
-            containerView?.addSubview(item.viewController.view)
-            let views = ["child": item.viewController.view]
-            containerView?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[child]|", options: [], metrics: nil, views: views))
-            containerView?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[child]|", options: [], metrics: nil, views: views))
         }
     }
 
@@ -127,7 +130,10 @@ public class CustomTabViewController: NSViewController {
 
     func select(item: CustomTabViewItem) {
         guard let lastItem = lastItem else {
-            containerView?.addSubview(item.viewController.view)
+            let childView = item.viewController.view
+            childView.frame = containerView?.bounds ?? .zero
+            childView.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
+            containerView?.addSubview(childView)
             return
         }
 

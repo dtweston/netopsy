@@ -15,8 +15,9 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <view translatesAutoresizingMaskIntoConstraints="NO" id="0Fb-4E-LRu">
+        <view id="0Fb-4E-LRu">
             <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fzi-y3-tbC">
                     <rect key="frame" x="220" y="145" width="10" height="10"/>
