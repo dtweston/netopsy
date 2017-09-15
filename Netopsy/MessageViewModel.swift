@@ -9,16 +9,16 @@
 import Foundation
 
 enum ContentEncoding {
-    case Normal
-    case Gzip
-    case Deflate
-    case Unknown
+    case normal
+    case gzip
+    case deflate
+    case unknown
 }
 
 enum TransferEncoding {
-    case Normal
-    case Chunked
-    case Unknown
+    case normal
+    case chunked
+    case unknown
 }
 
 
@@ -33,33 +33,33 @@ class MessageViewModel {
         for header in self.message.headers {
             if header.0.caseInsensitiveCompare("Content-Encoding") == .orderedSame {
                 if header.1.caseInsensitiveCompare("gzip") == .orderedSame {
-                    return .Gzip
+                    return .gzip
                 }
                 else if header.1.caseInsensitiveCompare("deflate") == .orderedSame {
-                    return .Deflate
+                    return .deflate
                 }
                 else {
-                    return .Unknown
+                    return .unknown
                 }
             }
         }
 
-        return .Normal
+        return .normal
     }()
 
     lazy var transferEncoding: TransferEncoding = {
         for header in self.message.headers {
             if header.0.caseInsensitiveCompare("Transfer-Encoding") == .orderedSame {
                 if header.1.caseInsensitiveCompare("chunked") == .orderedSame {
-                    return .Chunked
+                    return .chunked
                 }
                 else {
-                    return .Unknown
+                    return .unknown
                 }
             }
         }
 
-        return .Normal
+        return .normal
     }()
 
     lazy var isJson: Bool = {
@@ -93,9 +93,9 @@ class MessageViewModel {
 
     lazy var unchunkedData: Data? = {
         switch self.transferEncoding {
-        case .Chunked:
+        case .chunked:
             return self.unchunk(self.message.originalBody)
-        case .Normal:
+        case .normal:
             return self.message.originalBody
         default:
             return nil
@@ -104,7 +104,7 @@ class MessageViewModel {
 
     lazy var inflatedData: Data? = {
         switch self.contentEncoding {
-        case .Gzip, .Deflate:
+        case .gzip, .deflate:
             if let un = self.unchunkedData {
                 do {
                     return try self.inflate(un)

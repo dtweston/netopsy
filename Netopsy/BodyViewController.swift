@@ -92,7 +92,7 @@ class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
             tabViewController.disableItem(at: 1)
         }
 
-        if vm.transferEncoding == .Chunked {
+        if vm.transferEncoding == .chunked {
             unchunkedBody.bodyContent = {
                 if let un = vm.unchunkedData {
                     return String(data: un, encoding: .ascii)
@@ -105,7 +105,7 @@ class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
             tabViewController.disableItem(at: 2)
         }
 
-        if vm.contentEncoding == .Gzip || vm.contentEncoding == .Deflate {
+        if vm.contentEncoding == .gzip || vm.contentEncoding == .deflate {
             inflatedBody.bodyContent = {
                 if let inf = vm.inflatedData {
                     return String(data: inf, encoding: .utf8)
