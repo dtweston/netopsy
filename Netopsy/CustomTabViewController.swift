@@ -89,7 +89,7 @@ public class CustomTabViewController: NSViewController {
         self.containerView = container
 
         let views = ["selector": tabView, "content": container]
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[selector][content]|", options: .alignAllCenterX, metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[selector]-3-[content]|", options: .alignAllCenterX, metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[content]|", options: [], metrics: nil, views: views))
 
         updateTabs()

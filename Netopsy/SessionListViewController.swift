@@ -18,7 +18,7 @@ extension RequestMessageProtocol {
     }
 }
 
-class SessionListViewController: NSViewController {
+class SessionListViewController: NSViewController, NSSearchFieldDelegate {
 
     @IBOutlet var tableView: NSTableView!
     @IBOutlet var scrollView: NSScrollView!
@@ -46,6 +46,10 @@ class SessionListViewController: NSViewController {
         didSet {
             tableView.reloadData()
         }
+    }
+
+    @IBAction func didSearch(_ sender: NSSearchField) {
+        print("Searching for \(sender.stringValue)")
     }
 }
 

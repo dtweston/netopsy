@@ -22,39 +22,22 @@ class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
     var lastSelectedBody: NSViewController? = nil
     var messageViewModel: MessageViewModel? = nil
 
+    var representations: [BodyRepresentationProtocol]?
+
     override func loadView() {
         view = NSView()
         view.autoresizingMask = [.viewHeightSizable, .viewWidthSizable]
 
-        let rawBody = BodyDisplayViewController()
-        let queryList = QueryDisplayViewController()
-        let unchunkedBody = BodyDisplayViewController()
-        let inflatedBody = BodyDisplayViewController()
-        let imageBody = ImageDisplayViewController()
-        let jsonBody = JSONBodyViewController()
+        representations = [RawBodyRepresentation(), QueryBodyRepresentation(), UnchunkedBodyRepresentation(), InflatedBodyRepresentation(), ImageBodyRepresentation(), JsonBodyRepresentation()]
 
         let tabViewController = CustomTabViewController()
         tabViewController.delegate = self
-        tabViewController.tabViewItems = [
-            CustomTabViewItem(viewController: rawBody, title: "Raw"),
-            CustomTabViewItem(viewController: queryList, title: "Query"),
-            CustomTabViewItem(viewController: unchunkedBody, title: "Unchunked"),
-            CustomTabViewItem(viewController: inflatedBody, title: "Inflated"),
-            CustomTabViewItem(viewController: imageBody, title: "Image"),
-            CustomTabViewItem(viewController: jsonBody, title: "JSON"),
-        ]
+        tabViewController.tabViewItems = representations?.map({ return CustomTabViewItem(viewController: $0.viewController, title: $0.title )}) ?? []
 
         self.tabViewController = tabViewController
 
         addChildViewController(tabViewController)
         view.addSubview(tabViewController.view)
-
-        self.rawBody = rawBody
-        self.queryList = queryList
-        self.unchunkedBody = unchunkedBody
-        self.inflatedBody = inflatedBody
-        self.imageBody = imageBody
-        self.jsonBody = jsonBody
 
         let views = ["child": tabViewController.view]
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[child]|", options: [], metrics: nil, views: views))
@@ -67,90 +50,17 @@ class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
 
     fileprivate func updateTabs(_ msg: Message, _ tabViewController: CustomTabViewController) {
         let vm = MessageViewModel(message: msg)
-        if let body = message?.originalBody {
-            rawBody.bodyContent = {
-                return String(data: body, encoding: .ascii)
-            }
-            tabViewController.enableItem(at: 0)
-        }
-        else {
-            tabViewController.disableItem(at: 0)
-        }
+        guard let reps = representations else { return }
 
-        if let req = message as? RequestMessage {
-            if let components = URLComponents(url: req.url, resolvingAgainstBaseURL: false),
-                let queryItems = components.queryItems, queryItems.count > 0 {
-
-                queryList.queryItems = queryItems
-                tabViewController.enableItem(at: 1)
+        for i in 0 ..< reps.count {
+            let rep = reps[i]
+            if rep.isValid(message: vm) {
+                rep.update(message: vm)
+                tabViewController.enableItem(at: i)
             }
             else {
-                tabViewController.disableItem(at: 1)
+                tabViewController.disableItem(at: i)
             }
-        }
-        else {
-            tabViewController.disableItem(at: 1)
-        }
-
-        if vm.transferEncoding == .chunked {
-            unchunkedBody.bodyContent = {
-                if let un = vm.unchunkedData {
-                    return String(data: un, encoding: .ascii)
-                }
-                return ""
-            }
-            tabViewController.enableItem(at: 2)
-        }
-        else {
-            tabViewController.disableItem(at: 2)
-        }
-
-        if vm.contentEncoding == .gzip || vm.contentEncoding == .deflate {
-            inflatedBody.bodyContent = {
-                if let inf = vm.inflatedData {
-                    return String(data: inf, encoding: .utf8)
-                }
-
-                return "Missing"
-            }
-            tabViewController.enableItem(at: 3)
-        }
-        else {
-            tabViewController.disableItem(at: 3)
-        }
-
-        if vm.isImage {
-            imageBody.imageContent = {
-                if let inf = vm.inflatedData, inf.count > 0 {
-                    return NSImage(data: inf)
-                }
-
-                return NSImage()
-            }
-            tabViewController.enableItem(at: 4)
-        }
-        else {
-            tabViewController.disableItem(at: 4)
-        }
-
-        if vm.isJson {
-            jsonBody.jsonContent = {
-                if let inf = vm.inflatedData, inf.count > 0 {
-                    do {
-                        var parser = JSONParser(data: inf)
-                        return try parser.parse()
-                    } catch let ex {
-                        print("Unable to parse JSON: \(ex)")
-                    }
-                }
-
-                return nil
-            }
-
-            tabViewController.enableItem(at: 5)
-        }
-        else {
-            tabViewController.disableItem(at: 5)
         }
     }
 

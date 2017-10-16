@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos'>
+    <pages>
+        <page name='Untitled Page 2'/>
+        <page name='Custom Filter'/>
+        <page name='Custom Filter A'/>
+        <page name='Custom Filter B'/>
+        <page name='Filter Image'/>
+    </pages>
+</playground>

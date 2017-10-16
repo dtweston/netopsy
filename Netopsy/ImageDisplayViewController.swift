@@ -38,5 +38,4 @@ class ImageDisplayViewController: NSViewController {
 
         updateContent()
     }
-    
 }

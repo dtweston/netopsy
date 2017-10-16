@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="QueryDisplayViewController" customModule="Netopsy" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="SuG-7u-dEh" id="uER-5a-rrR"/>
                 <outlet property="view" destination="69y-Of-dwo" id="dZ0-Li-ODA"/>
             </connections>
         </customObject>

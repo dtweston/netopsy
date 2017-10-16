@@ -251,7 +251,7 @@ public struct JSONParser {
         if let s = try readAndMoveEscapedCodepointOrSurrogates() {
             return s
         }
-        printRemainingString()
+//        printRemainingString()
         guard let b = read() else {
             throw JSONError.expectedCharacter(i:i)
         }

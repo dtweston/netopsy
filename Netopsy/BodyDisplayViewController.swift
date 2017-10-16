@@ -9,6 +9,7 @@
 import Cocoa
 
 class BodyDisplayViewController: NSViewController {
+    typealias RepresentationType = String
 
     var bodyContent: (() -> (String?))? = nil {
         didSet {

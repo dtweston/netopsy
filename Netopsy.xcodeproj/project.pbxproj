@@ -29,6 +29,7 @@
 		B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688EF5B1D70AD4C005B313B /* RequestParser.swift */; };
 		B69FD8691D9AEC5400A7D682 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */; };
 		B6B1A4341DA4CFFE00AB40BC /* TraceDocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */; };
+		B6BAE61C1F716C920027F656 /* BodyRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAE61B1F716C920027F656 /* BodyRepresentation.swift */; };
 		B6C447F31F670B2F001A1C19 /* CustomTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C447F21F670B2D001A1C19 /* CustomTabViewController.swift */; };
 		B6C447F91F672ADD001A1C19 /* QueryDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447F81F672ADD001A1C19 /* QueryDisplayViewController.xib */; };
 		B6C447FB1F672B9E001A1C19 /* BodyDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */; };
@@ -70,6 +71,7 @@
 		B688EF5B1D70AD4C005B313B /* RequestParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParser.swift; sourceTree = "<group>"; };
 		B69FD8681D9AEC5400A7D682 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		B6B1A4331DA4CFFE00AB40BC /* TraceDocumentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraceDocumentController.swift; sourceTree = "<group>"; };
+		B6BAE61B1F716C920027F656 /* BodyRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyRepresentation.swift; sourceTree = "<group>"; };
 		B6C447F21F670B2D001A1C19 /* CustomTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewController.swift; sourceTree = "<group>"; };
 		B6C447F81F672ADD001A1C19 /* QueryDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryDisplayViewController.xib; sourceTree = "<group>"; };
 		B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyDisplayViewController.xib; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				B6C447FA1F672B9E001A1C19 /* BodyDisplayViewController.xib */,
 				B6C447FC1F672BEA001A1C19 /* ImageDisplayViewController.xib */,
 				B6C447FE1F672C31001A1C19 /* JSONBodyViewController.xib */,
+				B6BAE61B1F716C920027F656 /* BodyRepresentation.swift */,
 			);
 			path = Netopsy;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				B67F8F6D1D7D27C2001519F0 /* BodyDisplayViewController.swift in Sources */,
 				B688EF5C1D70AD4C005B313B /* RequestParser.swift in Sources */,
 				B624E0291D6E3B1000D29B22 /* AppDelegate.swift in Sources */,
+				B6BAE61C1F716C920027F656 /* BodyRepresentation.swift in Sources */,
 				B65E22171DB9DB5D002D9FDF /* Logger.swift in Sources */,
 				B686C4F41D76B3CC00EE9065 /* TraceDocument.swift in Sources */,
 				B69FD8691D9AEC5400A7D682 /* MainWindowController.swift in Sources */,

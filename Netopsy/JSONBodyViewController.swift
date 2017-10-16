@@ -47,6 +47,26 @@ class JSONBodyViewController: NSViewController, NSOutlineViewDelegate, NSOutline
         updateContent()
     }
 
+    override func viewDidDisappear() {
+        super.viewDidDisappear()
+        print("View did disappear")
+    }
+
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        print("View did appear")
+    }
+
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        print("View will disappear")
+    }
+
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        print("View will appear")
+    }
+
     func jsonValue(for item: Any) -> JSONValue? {
         if let jv = item as? (String, JSONValue) {
             return jv.1
@@ -54,6 +74,8 @@ class JSONBodyViewController: NSViewController, NSOutlineViewDelegate, NSOutline
 
         return nil
     }
+
+    // MARK: - NSOutlineViewDataSource methods
 
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         guard let item = item else { return 1 }
@@ -73,7 +95,7 @@ class JSONBodyViewController: NSViewController, NSOutlineViewDelegate, NSOutline
         guard let item = item else { return json }
         if let jv = jsonValue(for: item) {
             switch jv {
-            case .array(let a): return ("\(index)", a[index])
+            case .array(let a): return ("Index \(index)", a[index])
             case .object(let d): return d[index]
             default: break
             }

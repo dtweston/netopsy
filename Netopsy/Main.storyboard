@@ -116,13 +116,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-sm-gjc">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <rect key="frame" x="0.0" y="29" width="450" height="271"/>
                                 <clipView key="contentView" wantsLayer="YES" id="p3Z-dM-7Gf">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="271"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView wantsLayer="YES" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" emptySelection="NO" rowSizeStyle="automatic" headerView="gXH-Rk-3fn" viewBased="YES" id="DLH-Bf-YM9">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="277"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="248"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -148,7 +148,7 @@
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-KP-8OC">
                                                                     <rect key="frame" x="5" y="0.0" width="34" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" title="Table View Cell" id="Edl-cl-1uj">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" title="1" id="Edl-cl-1uj">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -294,12 +294,38 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="C80-6N-J83">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="29"/>
+                                <subviews>
+                                    <searchField wantsLayer="YES" focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aj-ah-e6o">
+                                        <rect key="frame" x="9" y="4" width="432" height="22"/>
+                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" focusRingType="none" drawsBackground="YES" usesSingleLineMode="YES" sendsSearchStringImmediately="YES" id="rzP-yb-J4B">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </searchFieldCell>
+                                        <connections>
+                                            <action selector="didSearch:" target="aty-di-Ryb" id="ufW-sT-lgt"/>
+                                            <outlet property="delegate" destination="aty-di-Ryb" id="Gem-yU-pzi"/>
+                                        </connections>
+                                    </searchField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2aj-ah-e6o" firstAttribute="centerY" secondItem="C80-6N-J83" secondAttribute="centerY" id="IDu-V2-BvK"/>
+                                    <constraint firstItem="2aj-ah-e6o" firstAttribute="centerX" secondItem="C80-6N-J83" secondAttribute="centerX" id="Vhf-Up-jmP"/>
+                                    <constraint firstAttribute="height" constant="29" id="WlS-mw-Oza"/>
+                                    <constraint firstAttribute="trailing" secondItem="2aj-ah-e6o" secondAttribute="trailing" constant="9" id="kzs-y2-FNl"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="C80-6N-J83" secondAttribute="bottom" id="84A-lR-XlZ"/>
                             <constraint firstItem="rc0-sm-gjc" firstAttribute="leading" secondItem="KnL-m1-Ml8" secondAttribute="leading" id="FbN-oU-doD"/>
                             <constraint firstAttribute="trailing" secondItem="rc0-sm-gjc" secondAttribute="trailing" id="SHj-Gs-oBg"/>
+                            <constraint firstItem="C80-6N-J83" firstAttribute="leading" secondItem="KnL-m1-Ml8" secondAttribute="leading" id="hfk-RI-ojM"/>
+                            <constraint firstAttribute="trailing" secondItem="C80-6N-J83" secondAttribute="trailing" id="hud-AT-KHZ"/>
+                            <constraint firstItem="C80-6N-J83" firstAttribute="top" secondItem="rc0-sm-gjc" secondAttribute="bottom" id="kx0-JO-WMx"/>
                             <constraint firstItem="rc0-sm-gjc" firstAttribute="top" secondItem="KnL-m1-Ml8" secondAttribute="top" id="oOt-0B-ZpQ"/>
-                            <constraint firstAttribute="bottom" secondItem="rc0-sm-gjc" secondAttribute="bottom" id="xmO-YV-2vC"/>
                         </constraints>
                     </view>
                     <connections>
