@@ -94,17 +94,17 @@ class JSONBodyViewController: NSViewController, NSOutlineViewDelegate, NSOutline
 
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
 
-        var cellIdentifier = ""
+        var cellIdentifier = NSUserInterfaceItemIdentifier("")
         var text = ""
         var textColor = NSColor.black
 
         if let pair = item as? (String, JSONValue) {
             if tableColumn == outlineView.tableColumns[0] {
-                cellIdentifier = "JsonKeyCellID"
+                cellIdentifier = NSUserInterfaceItemIdentifier("JsonKeyCellID")
                 text = "\(pair.0)"
             }
             else if tableColumn == outlineView.tableColumns[1] {
-                cellIdentifier = "JsonValueCellID"
+                cellIdentifier = NSUserInterfaceItemIdentifier("JsonValueCellID")
                 switch pair.1 {
                 case .array(let a):
                     textColor = NSColor.gray
@@ -129,7 +129,7 @@ class JSONBodyViewController: NSViewController, NSOutlineViewDelegate, NSOutline
             print("Item: \(item)")
         }
 
-        if let view = outlineView.make(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView {
+        if let view = outlineView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView {
             view.textField?.textColor = textColor
             view.textField?.stringValue = text
             return view

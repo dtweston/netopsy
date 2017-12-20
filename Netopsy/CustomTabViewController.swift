@@ -132,7 +132,7 @@ public class CustomTabViewController: NSViewController {
         guard let lastItem = lastItem else {
             let childView = item.viewController.view
             childView.frame = containerView?.bounds ?? .zero
-            childView.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
+            childView.autoresizingMask = [.width, .height]
             containerView?.addSubview(childView)
             return
         }

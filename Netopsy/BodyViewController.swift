@@ -24,7 +24,7 @@ class BodyViewController: NSViewController, CustomTabViewControllerDelegate {
 
     override func loadView() {
         view = NSView()
-        view.autoresizingMask = [.viewHeightSizable, .viewWidthSizable]
+        view.autoresizingMask = [.width, .height]
 
         let rawBody = BodyDisplayViewController()
         let queryList = QueryDisplayViewController()

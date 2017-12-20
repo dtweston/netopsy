@@ -316,7 +316,7 @@ public struct JSONParser {
             let v = try readValue()
             switch s {
             case .string(let str):
-                d.append(str, v)
+                d.append((str, v))
             default:
                 throw JSONError.expectedString(i: i)
             }

@@ -36,19 +36,19 @@ extension HeaderListViewController: NSTableViewDelegate {
 
         if let header = headers?[row] {
 
-            var cellIdentifier = ""
+            var cellIdentifier = NSUserInterfaceItemIdentifier("")
             var text = ""
 
             if tableColumn == tableView.tableColumns[0] {
-                cellIdentifier = "HeaderNameCellID"
+                cellIdentifier = NSUserInterfaceItemIdentifier("HeaderNameCellID")
                 text = header.0
             }
             else if tableColumn == tableView.tableColumns[1] {
-                cellIdentifier = "HeaderValueCellID"
+                cellIdentifier = NSUserInterfaceItemIdentifier("HeaderValueCellID")
                 text = header.1
             }
 
-            if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
+            if let cell = tableView.makeView(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
                 cell.textField?.stringValue = text
                 return cell
             }

@@ -29,8 +29,8 @@ class TraceDocument: NSDocument {
     }
 
     override func makeWindowControllers() {
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        if let windowController = storyboard.instantiateController(withIdentifier: "TraceWindowID") as? NSWindowController {
+        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        if let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("TraceWindowID")) as? NSWindowController {
             addWindowController(windowController)
 
             if let mainVC = windowController.contentViewController as? MainViewController {
@@ -71,9 +71,4 @@ class TraceDocument: NSDocument {
         // If you override either of these, you should also override -isEntireFileLoaded to return false if the contents are lazily loaded.
         throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
-
-    override class func autosavesInPlace() -> Bool {
-        return false
-    }
-
 }

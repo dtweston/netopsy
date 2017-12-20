@@ -70,17 +70,17 @@ extension SessionListViewController: NSTableViewDelegate {
             return nil
         }
 
-        var cellIdentifier = ""
+        var cellIdentifier = NSUserInterfaceItemIdentifier("")
         var text = ""
 
         let textColor = file.request.isTunnel() ? NSColor.gray : NSColor.black
 
         if tableColumn == tableView.tableColumns[0] {
-            cellIdentifier = "SessionNumberCellID"
+            cellIdentifier = NSUserInterfaceItemIdentifier("SessionNumberCellID")
             text = "\(file.num)"
         }
         else if tableColumn == tableView.tableColumns[1] {
-            cellIdentifier = "StatusCodeCellID"
+            cellIdentifier = NSUserInterfaceItemIdentifier("StatusCodeCellID")
             if let code = file.response?.statusCode {
                 text = "\(code)"
             }
@@ -89,11 +89,11 @@ extension SessionListViewController: NSTableViewDelegate {
             }
         }
         else if tableColumn == tableView.tableColumns[2] {
-            cellIdentifier = "HostCellID"
+            cellIdentifier = NSUserInterfaceItemIdentifier("HostCellID")
             text = file.request.isTunnel() ? "Tunnel to" : file.request?.url.host ?? ""
         }
         else if tableColumn == tableView.tableColumns[3] {
-            cellIdentifier = "PathCellID"
+            cellIdentifier = NSUserInterfaceItemIdentifier("PathCellID")
             if file.request.isTunnel() {
                 text = file.request?.url.absoluteString ?? ""
             }
@@ -102,7 +102,7 @@ extension SessionListViewController: NSTableViewDelegate {
             }
         }
 
-        if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
+        if let cell = tableView.makeView(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = text
             cell.textField?.textColor = textColor
             return cell

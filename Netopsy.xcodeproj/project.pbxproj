@@ -457,7 +457,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Netopsy/Netopsy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -478,7 +478,7 @@
 				PROVISIONING_PROFILE = "e1ccefd9-1d30-4d59-930d-86d5ae7fb8a4";
 				PROVISIONING_PROFILE_SPECIFIER = "Netopsy Production Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Netopsy/Netopsy-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
