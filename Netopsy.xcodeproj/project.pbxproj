@@ -62,6 +62,8 @@
 		B66A42B31FFB674100EB7003 /* QueryDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66A42AF1FFB674000EB7003 /* QueryDisplayViewController.xib */; };
 		B66A42B41FFB674100EB7003 /* BodyDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66A42B01FFB674100EB7003 /* BodyDisplayViewController.xib */; };
 		B66A42B51FFB674100EB7003 /* JSONBodyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66A42B11FFB674100EB7003 /* JSONBodyViewController.xib */; };
+		B66A42B72009536600EB7003 /* Socks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A42B62009536600EB7003 /* Socks.swift */; };
+		B66A42B920096C7B00EB7003 /* SocksSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A42B820096C7B00EB7003 /* SocksSerializer.swift */; };
 		B672FF6B1D832C9000A4AA42 /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */; };
 		B672FF6D1D8343AF00A4AA42 /* ImageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672FF6C1D8343AF00A4AA42 /* ImageDisplayViewController.swift */; };
 		B67F8F6A1D7D222B001519F0 /* HeaderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F8F691D7D222B001519F0 /* HeaderListViewController.swift */; };
@@ -278,6 +280,8 @@
 		B66A42AF1FFB674000EB7003 /* QueryDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryDisplayViewController.xib; sourceTree = "<group>"; };
 		B66A42B01FFB674100EB7003 /* BodyDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BodyDisplayViewController.xib; sourceTree = "<group>"; };
 		B66A42B11FFB674100EB7003 /* JSONBodyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSONBodyViewController.xib; sourceTree = "<group>"; };
+		B66A42B62009536600EB7003 /* Socks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socks.swift; sourceTree = "<group>"; };
+		B66A42B820096C7B00EB7003 /* SocksSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocksSerializer.swift; sourceTree = "<group>"; };
 		B672FF6A1D832C9000A4AA42 /* BodyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
 		B672FF6C1D8343AF00A4AA42 /* ImageDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDisplayViewController.swift; sourceTree = "<group>"; };
 		B67F8F691D7D222B001519F0 /* HeaderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderListViewController.swift; sourceTree = "<group>"; };
@@ -565,6 +569,8 @@
 				B628B75F1EA7DEAA005B8B32 /* Proxying.h */,
 				B60368AF1E1D879100E48D12 /* ProxyListener.swift */,
 				B628B7341EA7D9CC005B8B32 /* Info.plist */,
+				B66A42B62009536600EB7003 /* Socks.swift */,
+				B66A42B820096C7B00EB7003 /* SocksSerializer.swift */,
 			);
 			path = Proxying;
 			sourceTree = "<group>";
@@ -1261,6 +1267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B628B77C1EA7E226005B8B32 /* ProxyListener.swift in Sources */,
+				B66A42B920096C7B00EB7003 /* SocksSerializer.swift in Sources */,
+				B66A42B72009536600EB7003 /* Socks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
