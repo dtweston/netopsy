@@ -38,6 +38,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
 
+        let config = ProxyConfigurator()
+        config.activate()
+
+        return
         do {
             let appSupportDir = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             if let bundleId = Bundle.main.bundleIdentifier {
@@ -70,7 +74,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             print("blah: \(trustProps)")
                         }
 
-                        let config = ProxyConfigurator()
                         let status = config.displayCerts([rootCert])
                         if status == NSApplication.ModalResponse.OK.rawValue {
                             SecCertificateAddToKeychain(rootCert, nil)
