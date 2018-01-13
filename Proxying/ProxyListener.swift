@@ -86,7 +86,7 @@ public class RequestHandler: NSObject, GCDAsyncSocketDelegate {
                         }
                     }
 
-                    var relativePath = start.url.path.utf8.count > 0 ? start.url.path : "/"
+                    var relativePath = !start.url.path.isEmpty ? start.url.path : "/"
                     if let query = start.url.query {
                         relativePath += "?\(query)"
                     }
@@ -102,8 +102,6 @@ public class RequestHandler: NSObject, GCDAsyncSocketDelegate {
                         let length = UInt(lengthStr) {
                         sock.readData(toLength: length, withTimeout: -1, tag: 1)
                     } else {
-                        print("No request body")
-
                         destServer.readData(to: HttpMessageParser.doubleLineSeparator, withTimeout: -1, tag: 2)
                     }
                 } else {

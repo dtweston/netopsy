@@ -77,7 +77,7 @@ public struct JSONParser {
             print("-- can't print remaining string")
             return
         }
-        print("-- REMAINING STRING FROM \(i): \(remainingString)")
+//        print("-- REMAINING STRING FROM \(i): \(remainingString)")
     }
 
     func read() -> UInt8? {

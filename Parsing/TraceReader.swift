@@ -336,15 +336,16 @@ public class RecordingTrace: Trace, ITrace {
     override public func addSessionFile(num: Int, fileType: FileType, messageIndex: MessageIndex) {
         super.addSessionFile(num: num, fileType: fileType, messageIndex: messageIndex)
         if sessions.count >= num {
-            sessions[num-1].response = messageIndex as? ResponseIndex
+            var session = sessions[num-1]
+            assert(session.response == nil)
+            assert(messageIndex is ResponseIndex)
+            session.response = messageIndex as? ResponseIndex
             DispatchQueue.main.async {
                 self.delegate?.traceDidUpdateSession(self, at: num-1)
             }
         }
         else {
-            if messageIndex is ResponseIndex {
-                print("ACK!")
-            }
+            assert(messageIndex is RequestIndex)
             sessions.append(SessionIndex(num: num, request: messageIndex as? RequestIndex, response: nil, trace: self))
             DispatchQueue.main.async {
                 self.delegate?.traceDidAddSession(self)
