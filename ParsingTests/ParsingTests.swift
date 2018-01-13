@@ -10,27 +10,29 @@ import XCTest
 @testable import Parsing
 
 class ParsingTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testBadChunkSize() {
+        let text = "4\r\nWiki\r\n5\r\npedia\r\nG\r\n in\r\n\r\nchunks.\r\n0\r\n\r\n"
+        let data = text.data(using: .utf8)!
+        XCTAssertThrowsError(try HttpMessageParser.unchunk(data))
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    func testChunkLengthTooLong() {
+        let text = "45\r\nWiki\r\n5\r\npedia\r\nG\r\n in\r\n\r\nchunks.\r\n0\r\n\r\n"
+        let data = text.data(using: .utf8)!
+        XCTAssertThrowsError(try HttpMessageParser.unchunk(data))
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testUnchunkPlainTextFails() {
+        let text = "this is plain text"
+        let data = text.data(using: .utf8)!
+        XCTAssertThrowsError(try HttpMessageParser.unchunk(data))
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testSimpleUnchunk() {
+        let text = "4\r\nWiki\r\n5\r\npedia\r\nE\r\n in\r\n\r\nchunks.\r\n0\r\n\r\n"
+        let data = text.data(using: .utf8)!
+        let answerData = try! HttpMessageParser.unchunk(data)
+        let answerText = String(data: answerData, encoding: .utf8)!
+        XCTAssertEqual(answerText, "Wikipedia in\r\n\r\nchunks.")
     }
-    
 }

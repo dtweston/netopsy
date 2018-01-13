@@ -116,11 +116,61 @@ extension HttpMessage: CustomDebugStringConvertible {
 }
 
 public class HttpMessageParser {
+    enum UnchunkError: Swift.Error {
+        public struct Context {
+            let position: Data.Index
+            let partialResult: Data
+        }
+
+        case expectedNewline(Context)
+        case expectedPositiveNumber(Context)
+        case invalidChunkLength
+    }
+
     let blah = Dictionary<String, String>()
     public static let lineSeparator = "\r\n".data(using: .utf8)!
     public static let doubleLineSeparator = "\r\n\r\n".data(using:.utf8)!
 
     public init() {}
+
+    public static func unchunk(_ data: Data) throws -> Data {
+        var retData = Data()
+        var start = data.startIndex
+        repeat {
+            if let oRange = data.range(of: HttpMessageParser.lineSeparator, options: [], in: start..<data.endIndex) {
+                let lenData = data.subdata(in: start..<oRange.lowerBound)
+                if lenData.count == 0 {
+                    throw UnchunkError.expectedPositiveNumber(UnchunkError.Context(position: start, partialResult: retData))
+                }
+                if let lenStr = String(data: lenData, encoding: .utf8),
+                    let len = Int(lenStr, radix: 16) {
+                    if len > 0 {
+                        if let upperIndex = data.index(oRange.upperBound, offsetBy: len, limitedBy: data.endIndex) {
+                        let chunkData = data.subdata(in: oRange.upperBound..<upperIndex)
+                        let nextStart = data.index(upperIndex, offsetBy: 2)
+                        let trailingNewline = data.subdata(in: upperIndex..<nextStart)
+
+                        start = nextStart
+
+                        retData.append(chunkData)
+                        }
+                        else {
+                            throw UnchunkError.invalidChunkLength
+                        }
+                    }
+                    else {
+                        return retData
+                    }
+                }
+                else {
+                    throw UnchunkError.expectedPositiveNumber(UnchunkError.Context(position: start, partialResult: retData))
+                }
+            }
+            else {
+                throw UnchunkError.expectedNewline(UnchunkError.Context(position: start, partialResult: retData))
+            }
+        } while true
+    }
 
     public func parseHeaders(headerData: Data) -> (String, MessageHeaders) {
         var headerList: [(String, String)] = []

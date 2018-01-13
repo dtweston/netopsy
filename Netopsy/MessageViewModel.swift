@@ -99,7 +99,7 @@ class MessageViewModel {
     lazy var unchunkedData: Data? = {
         switch self.transferEncoding {
         case .chunked:
-            return self.unchunk(self.message.originalBody)
+            return try? HttpMessageParser.unchunk(self.message.originalBody)
         case .normal:
             return self.message.originalBody
         default:
@@ -123,36 +123,6 @@ class MessageViewModel {
             return self.unchunkedData
         }
     }()
-
-    func unchunk(_ data: Data) -> Data {
-        var retData = Data()
-        var start = data.startIndex
-        repeat {
-            if let oRange = data.range(of: HttpMessageParser.lineSeparator, options: [], in: start..<data.endIndex) {
-                let lenData = data.subdata(in: start..<oRange.lowerBound)
-                if lenData.count == 0 {
-                    return retData
-                }
-                if let lenStr = String(data: lenData, encoding: .utf8),
-                    let len = Int(lenStr, radix: 16) {
-
-                    if len > 0 {
-                        let upperIndex = data.index(oRange.upperBound, offsetBy: len)
-                        let chunkData = data.subdata(in: oRange.upperBound..<upperIndex)
-                        let nextStart = data.index(upperIndex, offsetBy: 2)
-                        let trailingNewline = data.subdata(in: upperIndex..<nextStart)
-
-                        start = nextStart
-
-                        retData.append(chunkData)
-                    }
-                    else {
-                        return retData
-                    }
-                }
-            }
-        } while true
-    }
 
     func inflate(_ data: Data) throws -> Data {
         var mutableData = data
