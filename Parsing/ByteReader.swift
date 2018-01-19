@@ -106,7 +106,9 @@ class ByteReader
 
     func nextUInt24() -> UInt? {
         if index + 3 <= bytes.count {
-            let num = UInt(bytes[index]) << 16 | UInt(bytes[index+1]) << 8 | UInt(bytes[index+2])
+            var num = UInt(bytes[index]) << 16
+            num |= UInt(bytes[index+1]) << 8
+            num |= UInt(bytes[index+2])
             index += 3
             return num
         }
@@ -116,7 +118,10 @@ class ByteReader
 
     func nextUInt32() -> UInt32? {
         if index + 4 <= bytes.count {
-            let num = UInt32(bytes[index]) << 24 | UInt32(bytes[index+1]) << 16 | UInt32(bytes[index+2]) << 8 | UInt32(bytes[index+3])
+            var num = UInt32(bytes[index]) << 24
+            num |= UInt32(bytes[index+1]) << 16
+            num |= UInt32(bytes[index+2]) << 8
+            num |= UInt32(bytes[index+3])
             index += 4
             return num
         }

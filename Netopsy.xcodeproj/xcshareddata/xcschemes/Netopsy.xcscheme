@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -73,9 +73,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B624E0241D6E3B1000D29B22"
-            BuildableName = "Netopsy.app"
-            BlueprintName = "Netopsy"
+            BlueprintIdentifier = "B66A42C6200BFA7300EB7003"
+            BuildableName = "socksd"
+            BlueprintName = "socksd"
             ReferencedContainer = "container:Netopsy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -97,9 +97,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B624E0241D6E3B1000D29B22"
-            BuildableName = "Netopsy.app"
-            BlueprintName = "Netopsy"
+            BlueprintIdentifier = "B66A42C6200BFA7300EB7003"
+            BuildableName = "socksd"
+            BlueprintName = "socksd"
             ReferencedContainer = "container:Netopsy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

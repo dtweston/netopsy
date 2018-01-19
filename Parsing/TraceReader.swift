@@ -161,8 +161,8 @@ fileprivate class FolderTrace: Trace, ITrace {
             let filename = fileURL.lastPathComponent
             let cFilename = filename as NSString
             if let match = regex.firstMatch(in: filename, options: [], range: NSMakeRange(0, cFilename.length)) {
-                let numStr = cFilename.substring(with: match.rangeAt(1))
-                let typeStr = cFilename.substring(with: match.rangeAt(2))
+                let numStr = cFilename.substring(with: match.range(at: 1))
+                let typeStr = cFilename.substring(with: match.range(at: 2))
                 if let sessionNumber = Int(numStr) {
                     if let data = try? self.fileData(at: fileURL.path, portion: true) {
                         let type = FileType(typeStr: typeStr)
@@ -270,8 +270,8 @@ fileprivate class ZippedTrace: Trace, ITrace {
                 let file = try zipFile.getCurrentFileInZipInfo()
                 let nsPath = file.name as NSString
                 if let match = regex.firstMatch(in: file.name, options: [], range: NSMakeRange(0, nsPath.length)) {
-                    let numStr = nsPath.substring(with: match.rangeAt(1))
-                    let typeStr = nsPath.substring(with: match.rangeAt(2))
+                    let numStr = nsPath.substring(with: match.range(at: 1))
+                    let typeStr = nsPath.substring(with: match.range(at: 2))
                     if let sessionNumber = Int(numStr) {
                         if let data = try? self.currentFileData(portion: true) {
                             let type = FileType(typeStr: typeStr)
